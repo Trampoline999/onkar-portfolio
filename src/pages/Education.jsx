@@ -1,0 +1,48 @@
+import Card from "../customComp/Card";
+import college from "../assets/images/dypani.mp4";
+
+const Education = () => {
+  return (
+    <div className="flex flex-col items-center py-8">
+      <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument underline decoration-wavy underline-offset-8 decoration-blue-400 py-8 sm:py-12 md:py-16 mb-16">
+        Education
+      </h1>
+
+      {/* Big Card */}
+      <div className="w-full px-4 sm:px-6 md:px-10">
+        <div
+          className="
+            bg-[#fdf5f5]
+            rounded-4xl
+            shadow-[0_20px_40px_-15px_rgba(0,0,0,0.4)]
+            w-full  mx-auto
+            min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:h-[758px]
+            flex flex-col lg:flex-row
+            mb-44
+            items-center
+            justify-around
+            gap-8 
+            p-4
+            sm:p-10 md:p-12 lg:p-12"
+        >
+          <Card video={college} />
+
+          {/* Text */}
+          <div className="flex flex-col text-left gap-4 max-w-2xl sm:items-center md:items-center md:text-center lg:pl-10 lg:items-start lg:text-left">
+            <h1 className="text-grey-900 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold font-bricolage">
+              D.Y Patil College of <br />
+              Engineering and Technology
+            </h1>
+            <p className="text-sm sm:text-base md:text-l lg:text-lg leading-relaxed text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+              consequatur necessitatibus excepturi quis distinctio error autem
+              mollitia sequi fugiat debitis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Education;

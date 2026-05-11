@@ -1,0 +1,84 @@
+import { cn } from "../lib/utils";
+
+export const BentoGrid = ({ className, children }) => {
+  return (
+    <div
+      className={cn(
+        "grid w-full grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem]",
+        className,
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+export const BentoCard = ({
+  className,
+  eyebrow,
+  title,
+  titleClassName,
+  description,
+  cta,
+  onCtaClick,
+  header,
+  footer,
+}) => {
+  return (
+    <div
+      className={cn(
+        "relative flex flex-col overflow-hidden rounded-4xl text-card-foreground",
+        className,
+      )}
+    >
+      {header ? <div className="relative shrink-0">{header}</div> : null}
+
+      <div className="relative flex min-h-0 flex-1 flex-col gap-3 p-6 sm:p-7">
+        {eyebrow ? (
+          <p className="text-xs font-medium tracking-widest text-muted-foreground uppercase">
+            {eyebrow}
+          </p>
+        ) : null}
+
+        <div className="space-y-3">
+          {title ? (
+            <h3
+              className={cn(
+                "font-bricolage text-4xl font-semibold leading-tight sm:text-3xl lg:text-4xl",
+                titleClassName,
+              )}
+            >
+              {title}
+            </h3>
+          ) : null}
+          {description ? (
+            <p className=" font-bricolage max-w-[52ch] text-gray-900 text-sm leading-normal  sm:text-base">
+              {description}
+            </p>
+          ) : null}
+        </div>
+
+        {(cta || footer) && (
+          <div className="mt-auto flex items-end gap-4">
+            {footer ? <div className="min-w-0">{footer}</div> : null}
+
+            {cta ? (
+              <button
+                type="button"
+                onClick={onCtaClick}
+                className={cn(
+                  "ml-auto inline-flex items-center justify-center rounded-2xl px-4 py-2 text-sm font-semibold",
+                  "bg-foreground text-background shadow-sm transition",
+                  "hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                )}
+              >
+                {cta}
+              </button>
+            ) : null}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
