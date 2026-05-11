@@ -73,7 +73,7 @@ export default function Navbar() {
           className="flex items-center justify-between gap-4 px-6 py-2 rounded-full"
           style={GLASS_STYLE}
         >
-          <span className="text-sm font-semibold text-[#0a0a14d9]">
+          <span className="text-sm font-semibold text-white">
             {BRAND_NAME}
           </span>
 
@@ -83,8 +83,8 @@ export default function Navbar() {
             aria-label="Toggle navigation menu"
             className={`
               flex items-center justify-center w-9 h-9 rounded-full 
-              transition-all duration-150 active:scale-90 text-[#0a0a148c]
-              ${isMenuOpen ? "bg-black/5" : "bg-transparent"}
+              transition-all duration-150 active:scale-90 text-white
+              ${isMenuOpen ? "bg-black" : "bg-transparent"}
             `}
           >
             {isMenuOpen ? (

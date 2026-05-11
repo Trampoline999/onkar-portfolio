@@ -4,9 +4,8 @@ import bgImage from "../assets/images/bgImage.png";
 const Hero = () => {
   return (
     <section className="relative min-h-screen h-screen overflow-hidden">
-
       {/* Layer 3 — hero text */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-6 sm:px-10">
+      <div className="relative z-10 flex flex-col items-center justify-start sm:justify-center min-h-screen sm:h-screen text-center px-6 sm:px-10 pt-20 sm:pt-0">
         <p
           className="text-[10px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-gray-50 px-2 py-2 rounded-lg"
           style={{

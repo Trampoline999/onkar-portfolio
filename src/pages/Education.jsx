@@ -4,7 +4,7 @@ import college from "../assets/images/dypani.mp4";
 const Education = () => {
   return (
     <div className="flex flex-col items-center py-8">
-      <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument underline decoration-wavy underline-offset-8 decoration-blue-400 py-8 sm:py-12 md:py-16 mb-16">
+      <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument underline decoration-wavy underline-offset-8 decoration-blue-400 py-6 sm:py-10 md:py-14 mb-6 sm:mb-10 md:mb-16">
         Education
       </h1>
 
@@ -18,7 +18,7 @@ const Education = () => {
             w-full  mx-auto
             min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:h-[758px]
             flex flex-col lg:flex-row
-            mb-44
+            mb-8 sm:mb-16 md:mb-24
             items-center
             justify-around
             gap-8 
