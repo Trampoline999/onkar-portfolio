@@ -7,7 +7,8 @@ const NAV_LINKS = [
   { label: "Education", id: "education" },
   { label: "Skills", id: "skills" },
   { label: "Design", id: "design" },
-  { label: "Projects", id: "projects" }
+  { label: "Projects", id: "projects" },
+  {label:"Showcase",id:"showcase"}
 ];
 
 const GLASS_STYLE = {

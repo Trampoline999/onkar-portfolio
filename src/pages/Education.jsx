@@ -14,7 +14,7 @@ const Education = () => {
         <div
           className="
             bg-[#fdf5f5]
-            rounded-4xl
+            rounded-[28px]
             shadow-[0_20px_40px_15px_rgba(0,0,0,0.1)]
             w-full mx-auto max-w-7xl
             min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] h-auto
@@ -23,18 +23,18 @@ const Education = () => {
             items-center
             justify-around
             gap-4 
-            p-3
+            p-4
             md:p-12 lg:p-14"
         >
           <Card video={college} />
 
           {/* Text */}
-          <div className="flex flex-col text-left gap-2 max-w-2xl sm:items-center md:items-center md:text-center lg:pl- lg:items-start lg:text-left">
+          <div className="flex flex-col text-left gap-2 max-w-2xl sm:items-center md:items-center md:text-center  lg:items-start lg:text-left">
             <h1 className="text-grey-900 text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold font-bricolage dark:text-black">
               D.Y Patil College of <br />
               Engineering and Technology
             </h1>
-            <p className=" text-xs sm:text-sm md:text-l lg:text-lg leading-relaxed text-gray-700">
+            <p className=" pb-2 text-xs sm:text-sm md:text-l lg:text-lg leading-relaxed text-gray-700">
               A four-year <Highlighter action="highlight" color="#95c8f3">
                 Computer Science & Engineering
               </Highlighter>{" "} journey at D.Y. Patil College of Engineering & Technology, Kolhapur, graduating with a <Highlighter action="underline" color="#ff9a00"> CGPA of 7.76</Highlighter>{" "} and a passion for building real-world applications.

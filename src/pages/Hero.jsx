@@ -1,12 +1,11 @@
 import SplitText from "../../components/SplitText";
-import bgImage from "../assets/images/bgImage.png";
 import { Player } from '@lottiefiles/react-lottie-player';
 import mac from "../assets/images/mac.json";
 import { InteractiveHoverButton } from "../../components/ui/interactive-hover-button"
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden ">
+    <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden ">
       {/* Layer 3 — hero text */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 ">
         <Player

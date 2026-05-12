@@ -5,7 +5,7 @@ const Card = ({ video }) => {
       {/* Background Video - Covers the entire card */}
       <video
         src={video}
-        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0  h-full object-cover transition-transform duration-700 group-hover:scale-105"
         autoPlay
         muted
         loop

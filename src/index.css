@@ -177,3 +177,23 @@
   color: var(--card-foreground);
   box-sizing: border-box;
 }
+
+@keyframes hanging-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-hanging-marquee {
+  animation: hanging-marquee 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.pause-on-hover:hover .animate-hanging-marquee {
+  animation-play-state: paused;
+}
