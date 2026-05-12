@@ -5,7 +5,7 @@ import rocks from "../assets/images/rocks2.png";
 const Project = () => {
   return (
     <div id="projects" className="flex w-full flex-col justify-center my-20 px-4 sm:px-6 md:px-8 lg:px-8">
-      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl text-center mb-20 sm:mb-24 lg:mb-30">
+      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl underline decoration-wavy underline-offset-20 decoration-gray-900 dark:decoration-gray-200 text-center mb-20 sm:mb-24 lg:mb-30">
         Projects
       </h1>
       

@@ -2,6 +2,7 @@ import SplitText from "../../components/SplitText";
 import bgImage from "../assets/images/bgImage.png";
 import { Player } from '@lottiefiles/react-lottie-player';
 import mac from "../assets/images/mac.json";
+import { InteractiveHoverButton } from "../../components/ui/interactive-hover-button"
 
 const Hero = () => {
   return (
@@ -43,9 +44,9 @@ const Hero = () => {
               placeholder="enter your mail"
               className="w-full sm:w-1/2 rounded-lg border border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/10 px-3 py-2 text-sm text-black dark:text-white placeholder:text-black/50 dark:placeholder:text-white/50 outline-none backdrop-blur-sm"
             />
-            <button className="w-full sm:w-auto rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition hover:bg-black/20 dark:hover:bg-white/25">
+            <InteractiveHoverButton className="w-full sm:w-auto rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-6 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition ">
               Contact
-            </button>
+            </InteractiveHoverButton>
           </div>
         </div>
       </div>
