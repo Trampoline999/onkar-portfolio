@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-[80dvh] sm:min-h-[100dvh] flex flex-col justify-center overflow-hidden">
       {/* Layer 3 — hero text */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-20 sm:pt-0">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 ">
         <Player
           src={mac}
           className="w-48 sm:w-64 md:w-72 lg:w-80 object-contain -my-4 sm:-my-8"
