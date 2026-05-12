@@ -5,7 +5,7 @@ import mac from "../assets/images/mac.json";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[80dvh] sm:min-h-[100dvh] flex flex-col justify-center overflow-hidden">
+    <section className="relative  sm:min-h-[90dvh] flex flex-col justify-center overflow-hidden">
       {/* Layer 3 — hero text */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 ">
         <Player
