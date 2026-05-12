@@ -6,7 +6,7 @@ const ProfileCard = ({
   techstack = "React, Tailwind CSS, JavaScript",
 }) => {
   return (
-    <div className="w-full max-w-[280px] sm:max-w-[300px] md:max-w-[400px] lg:max-w-[500px] bg-[#f0f0f0] rounded-[28px] p-2.5 flex flex-col gap-3 shadow-sm">
+    <div className="w-full bg-[#f0f0f0] rounded-[28px] p-2.5 flex flex-col gap-3 shadow-sm">
       {/* Image / Video */}
       <div
         className="relative w-full rounded-[20px] overflow-hidden"
