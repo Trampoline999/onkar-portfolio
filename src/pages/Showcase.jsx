@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../assets/images/srled2.png";
 import img2 from "../assets/images/ddfs.png";
 import img3 from "../assets/images/ghc.png";
@@ -10,14 +10,20 @@ import img6 from "../assets/images/bba.png"
 
 const MEDIA = [img6,img1,img2, vid1, img3, img4, vid2, img5];
 
-const HangingCard = ({ src, index }) => {
+const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
   // Add slight alternating rotation to make them look naturally hanging
   const rotation = index % 2 === 0 ? "rotate-[-2deg]" : "rotate-[3deg]";
   const isVideo = typeof src === "string" && src.match(/\.(mp4|webm|ogg|mov)/i);
 
   return (
     
-    <div className={`relative flex flex-col items-center group transition-transform duration-700 ease-in-out hover:scale-110 hover:z-50 shrink-0 mx-4 sm:mx-8 md:mx-12 origin-top ${rotation} hover:rotate-0`}>
+    <div 
+      className={`relative flex flex-col items-center group transition-transform duration-700 ease-in-out hover:scale-110 hover:z-50 shrink-0 mx-4 sm:mx-8 md:mx-12 origin-top ${rotation} hover:rotate-0`}
+      onMouseEnter={onHoverStart}
+      onMouseLeave={onHoverEnd}
+      onTouchStart={onHoverStart}
+      onTouchEnd={onHoverEnd}
+    >
       {/* The string/wire connecting piece */}
       <div className="w-[2px] h-6 bg-gray-400 dark:bg-gray-500" />
       
@@ -52,6 +58,8 @@ const HangingCard = ({ src, index }) => {
 };
 
 const Showcase = () => {
+  const [isPaused, setIsPaused] = useState(false);
+
   return (
     <section id="showcase" className="relative w-full py-10 sm:py-32 overflow-hidden flex flex-col justify-center items-center">
       
@@ -60,7 +68,7 @@ const Showcase = () => {
       </h1>
 
       {/* Main Container */}
-      <div className="w-full max-w-[100vw] relative pause-on-hover pt-10">
+      <div className="w-full max-w-[100vw] relative pt-10">
         
         {/* Horizontal Wire Line */}
         <div className="absolute top-[40px] left-0 w-full h-[2px] bg-gray-300 dark:bg-gray-600 z-0" />
@@ -68,17 +76,32 @@ const Showcase = () => {
 
 
         {/* Scrolling Track */}
-        <div className="animate-hanging-marquee mt-0">
+        <div 
+          className="animate-hanging-marquee mt-0"
+          style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+        >
           {/* First Set of Cards */}
           <div className="flex shrink-0 px-4 items-start">
             {MEDIA.map((src, idx) => (
-              <HangingCard key={`set1-${idx}`} src={src} index={idx} />
+              <HangingCard 
+                key={`set1-${idx}`} 
+                src={src} 
+                index={idx} 
+                onHoverStart={() => setIsPaused(true)}
+                onHoverEnd={() => setIsPaused(false)}
+              />
             ))}
           </div>
           {/* Second Duplicate Set for Seamless Loop */}
           <div className="flex shrink-0 px-4 items-start">
             {MEDIA.map((src, idx) => (
-              <HangingCard key={`set2-${idx}`} src={src} index={idx} />
+              <HangingCard 
+                key={`set2-${idx}`} 
+                src={src} 
+                index={idx} 
+                onHoverStart={() => setIsPaused(true)}
+                onHoverEnd={() => setIsPaused(false)}
+              />
             ))}
           </div>
         </div>
