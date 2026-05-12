@@ -10,11 +10,11 @@ const Hero = () => {
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 ">
         <Player
           src={mac}
-          className="w-48 sm:w-64 md:w-72 lg:w-80 object-contain -my-4 sm:-my-8"
+          className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain -my-4 sm:-my-8"
           autoplay
           loop
           // Optional: add mouse-following physics for fun
-          style={{ transform: "perspective(1000px) rotateY(0deg) rotateX(0deg)" }}
+          style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
         />
         <p
           className="text-[10px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-black dark:text-gray-50 px-2 py-2 rounded-lg"
