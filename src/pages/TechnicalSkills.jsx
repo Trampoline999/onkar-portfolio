@@ -63,7 +63,7 @@ const TechnicalSkills = () => {
             />
 
             <BentoCard
-              className="md:col-span-3 bg-green-300 dark:bg-green-100"
+              className="md:col-span-3 bg-emerald-300 dark:bg-emerald-100"
           
               title="Backend"
               description="Vite + ESLint, component-driven workflows, and consistent UI primitives."
