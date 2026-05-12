@@ -15,8 +15,8 @@ const Education = () => {
             bg-[#fdf5f5]
             rounded-4xl
             shadow-[0_20px_40px_-15px_rgba(0,0,0,0.4)]
-            w-full  mx-auto
-            min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:h-[758px]
+            w-full mx-auto max-w-7xl
+            min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] h-auto
             flex flex-col lg:flex-row
             mb-8 sm:mb-16 md:mb-24
             items-center

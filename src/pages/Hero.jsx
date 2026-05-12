@@ -3,9 +3,9 @@ import bgImage from "../assets/images/bgImage.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen h-screen overflow-hidden">
+    <section className="relative min-h-[100dvh] flex flex-col justify-center overflow-hidden">
       {/* Layer 3 — hero text */}
-      <div className="relative z-10 flex flex-col items-center justify-start sm:justify-center min-h-screen sm:h-screen text-center px-6 sm:px-10 pt-20 sm:pt-0">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-24 sm:pt-0">
         <p
           className="text-[10px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-gray-50 px-2 py-2 rounded-lg"
           style={{
@@ -22,7 +22,7 @@ const Hero = () => {
           text="Onkar Chougule"
           className="font-instrument-spaced tracking-wide text-4xl sm:text-3xl md:text-6xl lg:text-8xl font-bold text-gray-100 mb-3 sm:mb-5 leading-tight"
         />
-        <p className="text-xs sm:text-base md:text-l max-w-65 sm:max-w-sm md:max-w-md text-neutral-300 tracking-wide leading-tight font-sans">
+        <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-300 tracking-wide leading-tight font-sans">
           I love building things that work beautifully — clean code, smooth
           interactions, and products that feel alive.
         </p>

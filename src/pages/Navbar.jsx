@@ -48,7 +48,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <div className="flex flex-col items-center pt-10 px-4 font-monolisa">
+    <div className="flex flex-col items-center pt-6 px-4 font-monolisa">
       {/* ── Desktop & Tablet Nav (sm+) ───────────────────────── */}
       <nav
         className="hidden sm:flex items-center gap-1 px-4 py-2.5 rounded-full relative z-20"

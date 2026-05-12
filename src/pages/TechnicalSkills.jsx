@@ -33,7 +33,7 @@ const TechnicalSkills = () => {
   return (
     <section className="flex w-full flex-col items-center py-10 sm:py-14">
       <div className="w-full px-4 sm:px-6 md:px-10">
-        <div className="mx-auto w-full max-w-[1380px]">
+        <div className="mx-auto w-full max-w-7xl">
           <h2 className="text-gray-100 mb-16 text-center font-instrument text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl lg:text-7xl">
             Technical Skills
           </h2>

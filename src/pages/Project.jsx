@@ -8,7 +8,7 @@ const Project = () => {
       <h1 className="font-instrument-spaced tracking-wide font-bold text-white text-5xl sm:text-6xl lg:text-7xl text-center mb-20 sm:mb-24 lg:mb-30">
         Projects
       </h1>
-      <div className="flex flex-wrap md:flex-wrap lg:flex-row justify-evenly gap-6 sm:gap-8 lg:gap-16 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto justify-items-center w-full">
         <ProfileCard
           imageSrc={hospital}
           name="Hospital Management"
