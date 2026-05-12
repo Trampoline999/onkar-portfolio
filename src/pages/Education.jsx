@@ -4,7 +4,7 @@ import college from "../assets/images/dypani.mp4";
 const Education = () => {
   return (
     <div className="flex flex-col items-center py-8">
-      <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument underline decoration-wavy underline-offset-8 decoration-blue-400 py-6 sm:py-10 md:py-14 mb-6 sm:mb-10 md:mb-16">
+      <h1 className="text-black dark:text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200 py-6 sm:py-10 md:py-14 mb-6 sm:mb-10 md:mb-16">
         Education
       </h1>
 
@@ -29,7 +29,7 @@ const Education = () => {
 
           {/* Text */}
           <div className="flex flex-col text-left gap-4 max-w-2xl sm:items-center md:items-center md:text-center lg:pl-10 lg:items-start lg:text-left">
-            <h1 className="text-grey-900 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold font-bricolage">
+            <h1 className="text-grey-900 text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-semibold font-bricolage dark:text-black">
               D.Y Patil College of <br />
               Engineering and Technology
             </h1>

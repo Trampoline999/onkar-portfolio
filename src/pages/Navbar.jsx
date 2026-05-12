@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import { IconMenu2, IconXFilled } from "@tabler/icons-react";
+import { IconMenu2, IconXFilled, IconSun, IconMoon } from "@tabler/icons-react";
 
 /* ── Constants ───────────────────────────────────────────── */
 const BRAND_NAME = "Onkar Chougule";
 const NAV_LINKS = ["About", "Education", "Projects", "Contact"];
 
 const GLASS_STYLE = {
-  background: "rgba(255, 255, 255, 0.05)",
-  backdropFilter: "blur(20px) saturate(1)",
-  WebkitBackdropFilter: "blur(20px) saturate(1.8)",
-  boxShadow: " 1.95px 1.95px 2.6px rgba(0,0,0,0.16)",
+  background: "rgba(255, 255, 255, 0.1)",
+  backdropFilter: "blur(24px) saturate(1.2)",
+  WebkitBackdropFilter: "blur(24px) saturate(1.2)",
+  boxShadow: "0 10px 40px -10px rgba(0,0,0,0.2), inset 0 1px 0 rgba(255,255,255,0.3)",
+  border: "1px solid rgba(255, 255, 255, 0.15)",
 };
 
 /* ── NavLink Component ───────────────────────────────────── */
@@ -24,7 +25,7 @@ function NavLink({ children, isMobile = false, onClick }) {
       className={`
         ${layoutStyles}
         text-sm font-medium transition-all duration-150
-        text-white/80 hover:bg-black/5 hover:text-white/80
+        text-black/80 dark:text-white/80 hover:bg-black/5 dark:hover:bg-white/10 hover:text-black dark:hover:text-white
       `}
     >
       {children}
@@ -35,6 +36,15 @@ function NavLink({ children, isMobile = false, onClick }) {
 /* ── Main Navbar ─────────────────────────────────────────── */
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [isDark]);
 
   // Close mobile menu when screen resizes to tablet/desktop
   useEffect(() => {
@@ -54,7 +64,7 @@ export default function Navbar() {
         className="hidden sm:flex items-center gap-1 px-4 py-2.5 rounded-full relative z-20"
         style={GLASS_STYLE}
       >
-        <span className="px-4 py-2 text-sm font-semibold mr-2 text-white">
+        <span className="px-4 py-2 text-sm font-semibold mr-2 text-black dark:text-white">
           {BRAND_NAME}
         </span>
 
@@ -64,6 +74,14 @@ export default function Navbar() {
         {NAV_LINKS.map((link) => (
           <NavLink key={link}>{link}</NavLink>
         ))}
+
+        <div className="w-px h-5 mx-2 rounded-full bg-black/10 dark:bg-white/10" />
+        <button
+          onClick={() => setIsDark(!isDark)}
+          className="p-1.5 rounded-full text-black/80 dark:text-white/80 hover:bg-black/5 dark:hover:bg-white/10 transition-all"
+        >
+          {isDark ? <IconSun size={18} /> : <IconMoon size={18} />}
+        </button>
       </nav>
 
       {/* ── Mobile Nav (< sm) ────────────────────────────── */}
@@ -73,26 +91,34 @@ export default function Navbar() {
           className="flex items-center justify-between gap-4 px-6 py-2 rounded-full"
           style={GLASS_STYLE}
         >
-          <span className="text-sm font-semibold text-white">
+          <span className="text-sm font-semibold text-black dark:text-white">
             {BRAND_NAME}
           </span>
 
-          <button
-            onClick={toggleMenu}
-            aria-expanded={isMenuOpen}
-            aria-label="Toggle navigation menu"
-            className={`
-              flex items-center justify-center w-9 h-9 rounded-full 
-              transition-all duration-150 active:scale-90 text-white
-              ${isMenuOpen ? "bg-black" : "bg-transparent"}
-            `}
-          >
-            {isMenuOpen ? (
-              <IconXFilled size={18} />
-            ) : (
-              <IconMenu2 size={18} stroke={2} />
-            )}
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="flex items-center justify-center w-9 h-9 rounded-full transition-all duration-150 active:scale-90 text-black dark:text-white bg-transparent"
+            >
+              {isDark ? <IconSun size={18} /> : <IconMoon size={18} />}
+            </button>
+            <button
+              onClick={toggleMenu}
+              aria-expanded={isMenuOpen}
+              aria-label="Toggle navigation menu"
+              className={`
+                flex items-center justify-center w-9 h-9 rounded-full 
+                transition-all duration-150 active:scale-90 text-black dark:text-white
+                ${isMenuOpen ? "bg-black/10 dark:bg-white/10" : "bg-transparent"}
+              `}
+            >
+              {isMenuOpen ? (
+                <IconXFilled size={18} />
+              ) : (
+                <IconMenu2 size={18} stroke={2} />
+              )}
+            </button>
+          </div>
         </nav>
 
         {/* Mobile Dropdown */}

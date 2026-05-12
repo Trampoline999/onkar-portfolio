@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Layer 3 — hero text */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-20 sm:pt-0">
         <p
-          className="text-[10px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-gray-50 px-2 py-2 rounded-lg"
+          className="text-[10px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-black dark:text-gray-50 px-2 py-2 rounded-lg"
           style={{
             background: "rgba(255,255,255,0.15)",
             backdropFilter: "blur(8px)",
@@ -20,9 +20,9 @@ const Hero = () => {
 
         <SplitText
           text="Onkar Chougule"
-          className="font-instrument-spaced tracking-wide text-4xl sm:text-3xl md:text-6xl lg:text-8xl font-bold text-gray-100 mb-3 sm:mb-5 leading-tight"
+          className="font-instrument-spaced tracking-wide text-4xl sm:text-3xl md:text-6xl lg:text-8xl font-bold text-black dark:text-gray-100 mb-3 sm:mb-5 leading-tight"
         />
-        <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-300 tracking-wide leading-tight font-sans">
+        <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-700 dark:text-neutral-300 tracking-wide leading-tight font-sans">
           I love building things that work beautifully — clean code, smooth
           interactions, and products that feel alive.
         </p>
@@ -31,9 +31,9 @@ const Hero = () => {
             <input
               type="text"
               placeholder="enter your mail"
-              className="w-full sm:w-1/2 rounded-lg border border-white/20 bg-white/10 px-3 py-2 text-sm text-white placeholder:text-white/50 outline-none backdrop-blur-sm"
+              className="w-full sm:w-1/2 rounded-lg border border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/10 px-3 py-2 text-sm text-black dark:text-white placeholder:text-black/50 dark:placeholder:text-white/50 outline-none backdrop-blur-sm"
             />
-            <button className="w-full sm:w-auto rounded-lg border border-white/20 bg-white/15 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wider text-white backdrop-blur-sm transition hover:bg-white/25">
+            <button className="w-full sm:w-auto rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-4 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition hover:bg-black/20 dark:hover:bg-white/25">
               Contact
             </button>
           </div>

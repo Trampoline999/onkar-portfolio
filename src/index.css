@@ -7,6 +7,7 @@
 @import "@fontsource-variable/geist";
 
 @custom-variant dark (&:is(.dark *));
+
 @font-face {
   font-family: 'Monolisa';
   src: url('./assets/fonts/0-MonoLisa-normal.woff2') format('woff2'),
@@ -24,7 +25,7 @@
 
 @utility font-instrument-spaced {
   font-family: var(--font-instrument);
-  letter-spacing: 0.01em; 
+  letter-spacing: 0.01em;
 
 }
 
@@ -70,28 +71,32 @@
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   --animate-meteor: meteor 5s linear infinite;
+
   @keyframes meteor {
-  0% {
-    transform: rotate(var(--angle)) translateX(0);
-    opacity: 1;
+    0% {
+      transform: rotate(var(--angle)) translateX(0);
+      opacity: 1;
     }
-  70% {
-    opacity: 1;
+
+    70% {
+      opacity: 1;
     }
-  100% {
-    transform: rotate(var(--angle)) translateX(-500px);
-    opacity: 0;
+
+    100% {
+      transform: rotate(var(--angle)) translateX(-500px);
+      opacity: 0;
     }
   }
 }
 
 :root {
+  --bg-color: #f0ece7;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
   --bg-blue: #0044CC;
-  --grid-color: rgba(255, 255, 255, 0.08);
+  --grid-color: rgba(0, 0, 0, 0.05);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
@@ -123,6 +128,8 @@
 }
 
 .dark {
+  --bg-color: #1a1a1a;
+  --grid-color: rgba(255, 255, 255, 0.05);
   --background: oklch(0.145 0 0);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);

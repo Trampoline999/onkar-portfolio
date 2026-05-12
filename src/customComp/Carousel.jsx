@@ -93,7 +93,7 @@ const Carousel = () => {
             border: "1px solid rgba(255,255,255,0.2)",
           }}
           >
-            <ChevronLeft className="w-6 h-6 text-gray-300" strokeWidth={3}/>
+            <ChevronLeft className="w-6 h-6 text-black dark:text-gray-300" strokeWidth={3}/>
           </button>
           <button
             onClick={() => scroll("right")}
@@ -105,7 +105,7 @@ const Carousel = () => {
             border: "1px solid rgba(255,255,255,0.2)",
           }}
           >
-            <ChevronRight className="w-6 h-6 text-gray-300" strokeWidth={3} />
+            <ChevronRight className="w-6 h-6 text-black dark:text-gray-300" strokeWidth={3} />
           </button>
         </div>
       </div>
