@@ -11,7 +11,7 @@ const Skill = () => {
             <span className="whitespace-nowrap text-black dark:text-gray-100">3D Blender</span>
             <RotatingText
               texts={words}
-              mainClassName="inline-flex flex-nowrap whitespace-nowrap sm:px-4 md:px-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-black overflow-hidden py-0.5 sm:py-1 md:py-1 rounded-xl"
+              mainClassName="inline-flex flex-nowrap whitespace-nowrap px-3 sm:px-4 md:px-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-black overflow-hidden py-0.5 sm:py-1 md:py-1 rounded-xl"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}

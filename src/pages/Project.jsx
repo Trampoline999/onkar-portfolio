@@ -9,7 +9,7 @@ const Project = () => {
         Projects
       </h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto w-full items-start">
          <ProfileCard
           imageSrc={rocks}
           name="Codewar"
