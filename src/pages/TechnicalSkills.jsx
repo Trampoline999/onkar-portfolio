@@ -31,7 +31,7 @@ const IconStrip = ({ icons }) => {
 
 const TechnicalSkills = () => {
   return (
-    <section className="flex w-full flex-col items-center py-10 sm:py-14">
+    <section id="skills" className="flex w-full flex-col items-center py-10 sm:py-14">
       <div className="w-full px-4 sm:px-6 md:px-10">
         <div className="mx-auto w-full max-w-7xl">
           <h2 className="text-black dark:text-gray-100 mb-16 text-center font-instrument text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl lg:text-7xl">
@@ -40,21 +40,21 @@ const TechnicalSkills = () => {
 
           <BentoGrid>
             <BentoCard
-              className="md:col-span-4 bg-pink-100"             
+              className="md:col-span-4 bg-pink-300 dark:bg-pink-100"             
               title="Frontend"            
               description="React, Tailwind, shadcn/ui — clean layouts, strong typography, and reusable components."
               footer={<IconStrip icons={[{ src: reactIcon, alt: "React" },, { src: cssIcon, alt: "CSS" }, { src: tailwindIcon, alt: "Tailwind CSS" }]} />}
             />
 
             <BentoCard
-              className="md:col-span-2 bg-indigo-100"              
+              className="md:col-span-2 bg-indigo-300 dark:bg-indigo-100"              
               title="Programming"          
               description="GSAP + Motion for delightful micro-interactions and scroll-based storytelling."
               footer={<IconStrip icons={[{ src: jsIcon, alt: "JavaScript" },{ src: java, alt: "java" }]} />}
             />
 
             <BentoCard
-              className="md:col-span-3 bg-orange-100"
+              className="md:col-span-3 bg-orange-300 dark:bg-orange-100"
               
               title="Frameworks"
              
@@ -63,10 +63,9 @@ const TechnicalSkills = () => {
             />
 
             <BentoCard
-              className="md:col-span-3 bg-green-100"
+              className="md:col-span-3 bg-green-300 dark:bg-green-100"
           
               title="Backend"
-              
               description="Vite + ESLint, component-driven workflows, and consistent UI primitives."
               footer={<IconStrip icons={[{ src: npm, alt: "npm" },{ src: dockerIcon, alt: "Docker" }, { src: vscodeIcon, alt: "VS Code" }]} />}
             />

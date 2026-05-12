@@ -3,7 +3,12 @@ import { IconMenu2, IconXFilled, IconSun, IconMoon } from "@tabler/icons-react";
 
 /* ── Constants ───────────────────────────────────────────── */
 const BRAND_NAME = "Onkar Chougule";
-const NAV_LINKS = ["About", "Education", "Projects", "Contact"];
+const NAV_LINKS = [
+  { label: "Education", id: "education" },
+  { label: "Skills", id: "skills" },
+  { label: "Design", id: "design" },
+  { label: "Projects", id: "projects" }
+];
 
 const GLASS_STYLE = {
   background: "rgba(255, 255, 255, 0.1)",
@@ -57,6 +62,15 @@ export default function Navbar() {
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Offset for fixed navbar if needed, but smooth is good for now
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="flex flex-col items-center pt-6 px-4 font-monolisa">
       {/* ── Desktop & Tablet Nav (sm+) ───────────────────────── */}
@@ -72,7 +86,9 @@ export default function Navbar() {
         <div className="w-px h-5 mr-2 rounded-full bg-black/10" />
 
         {NAV_LINKS.map((link) => (
-          <NavLink key={link}>{link}</NavLink>
+          <NavLink key={link.id} onClick={() => handleScroll(link.id)}>
+            {link.label}
+          </NavLink>
         ))}
 
         <div className="w-px h-5 mx-2 rounded-full bg-black/10 dark:bg-white/10" />
@@ -139,8 +155,8 @@ export default function Navbar() {
         >
           <div className="p-2 flex flex-col gap-1">
             {NAV_LINKS.map((link) => (
-              <NavLink key={link} isMobile onClick={() => setIsMenuOpen(false)}>
-                {link}
+              <NavLink key={link.id} isMobile onClick={() => handleScroll(link.id)}>
+                {link.label}
               </NavLink>
             ))}
           </div>

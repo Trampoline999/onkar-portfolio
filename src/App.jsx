@@ -5,6 +5,7 @@ import Education from "./pages/Education";
 import Skill from "./pages/Skill";
 import TechnicalSkills from "./pages/TechnicalSkills";
 import Project from "./pages/Project";
+import Showcase from "./pages/Showcase";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <TechnicalSkills />
       <Skill />
       <Project />
+      <Showcase />
     </Layout>
   );
 }
