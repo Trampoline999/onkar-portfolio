@@ -34,10 +34,10 @@ const Education = () => {
               D.Y Patil College of <br />
               Engineering and Technology
             </h1>
-            <p className=" text-xs sm:text-sm md:text-l lg:text-lg leading-relaxed text-gray-600">
-              A four-year <Highlighter  action="highlight" color="#87CEFA">
+            <p className=" text-xs sm:text-sm md:text-l lg:text-lg leading-relaxed text-gray-700">
+              A four-year <Highlighter action="highlight" color="#95c8f3">
                 Computer Science & Engineering
-              </Highlighter>{" "} journey at D.Y. Patil College of Engineering & Technology, Kolhapur, graduating with a <Highlighter action="underline" color="#ff9a00"> CGPA of 7.76</Highlighter>{" "} and a passion for building real-world applications
+              </Highlighter>{" "} journey at D.Y. Patil College of Engineering & Technology, Kolhapur, graduating with a <Highlighter action="underline" color="#ff9a00"> CGPA of 7.76</Highlighter>{" "} and a passion for building real-world applications.
             </p>
           </div>
         </div>

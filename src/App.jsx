@@ -12,8 +12,9 @@ export default function App() {
       <Hero />
       <Education />
       <TechnicalSkills />
-      <Skill />
       <Project />
+      <Skill />
+      
       {/* <Showcase /> */}
     </Layout>
   );
