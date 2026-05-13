@@ -1,6 +1,6 @@
 import ProfileCard from "../customComp/ProjectCard";
 import hospital from "../assets/images/hp.jpg";
-import guy from "../assets/images/guy.mp4";
+import guy from "../assets/images/guy.webm";
 import { GitHubCalendar } from 'react-github-calendar';
 import { useRef, useEffect } from "react";
 

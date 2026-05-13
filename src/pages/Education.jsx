@@ -1,5 +1,5 @@
 import Card from "../customComp/Card";
-import college from "../assets/images/dypani.mp4";
+import college from "../assets/images/dypani.webm";
 import { Highlighter } from "../../components/ui/highlighter"
 
 const Education = () => {
@@ -13,7 +13,7 @@ const Education = () => {
       <div className="w-full px-4 sm:px-6 md:px-10">
         <div
           className="
-            bg-[#fdf5f5]
+            bg-[#e9ece9]
             rounded-[28px]
             shadow-[0_20px_40px_15px_rgba(0,0,0,0.1)]
             w-full mx-auto max-w-7xl

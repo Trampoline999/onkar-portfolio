@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import img1 from "../assets/images/srled2.jpg";
-import img2 from "../assets/images/ddfs.jpg";
+import img2 from "../assets/images/ddfs.webp";
 import img3 from "../assets/images/ghc.jpg";
-import img4 from "../assets/images/Fined23.jpg";
+import img4 from "../assets/images/Fined23.webp";
 import img5 from "../assets/images/fr33.jpg";
-import vid1 from "../assets/images/box.mp4";
-import vid2 from "../assets/images/learning.mp4";
-import img6 from "../assets/images/bba.jpg"
+import img6 from "../assets/images/bba.webp"
 
-const MEDIA = [img6,img1,img2, vid1, img3, img4, vid2, img5];
+const MEDIA = [img6,img1,img2, img3, img4, img5];
 
 const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
   // Add slight alternating rotation to make them look naturally hanging
@@ -43,6 +41,7 @@ const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
               muted 
               playsInline 
               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
             />
           ) : (
             <img 

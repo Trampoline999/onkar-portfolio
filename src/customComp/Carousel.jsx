@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import learning from "../assets/images/learning.mp4";
-import fr32Video from "../assets/images/fr32.mp4";
-import handVideo from "../assets/images/hand.mp4";
-import guyVideo from "../assets/images/sidhuWithAudio.mp4";
+import learning from "../assets/images/learning.webm";
+import fr32Video from "../assets/images/fr32.webm";
+import handVideo from "../assets/images/hand.webm";
+import guyVideo from "../assets/images/sidhuWithAudio.webm";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const CARDS = [
@@ -67,6 +67,7 @@ const Carousel = () => {
               playsInline
               // Important: Ensure the video covers the container
               className="absolute inset-0 w-full h-full object-cover"
+              loading="lazy"
             />
             <div className="absolute bottom-0 left-0 w-full p-8 md:p-8 z-20 bg-gradient-to-t from-black/40 via-black/5 to-transparent">
               <p className="text-white/90 text-sm md:text-base font-medium mb-3 tracking-wide drop-shadow-lg">
