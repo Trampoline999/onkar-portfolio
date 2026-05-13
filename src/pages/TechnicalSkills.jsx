@@ -1,12 +1,12 @@
 import { BentoCard, BentoGrid } from "../customComp/BentoGrid";
-import reactIcon from "../assets/icons/icons8-react-100.png";
-import tailwindIcon from "../assets/icons/icons8-tailwind-css-100.png";
-import jsIcon from "../assets/icons/icons8-javascript-100.png";
-import cssIcon from "../assets/icons/icons8-css-100.png";
-import dockerIcon from "../assets/icons/icons8-docker-100.png";
-import vscodeIcon from "../assets/icons/icons8-visual-studio-code-100.png";
-import npm from "../assets/icons/icons8-npm-100.png";
-import java from "../assets/icons/icons8-java-100.png";
+import reactIcon from "../assets/icons/icons8-react-100.jpg";
+import tailwindIcon from "../assets/icons/icons8-tailwind-css-100.jpg";
+import jsIcon from "../assets/icons/icons8-javascript-100.jpg";
+import cssIcon from "../assets/icons/icons8-css-100.jpg";
+import dockerIcon from "../assets/icons/icons8-docker-100.jpg";
+import vscodeIcon from "../assets/icons/icons8-visual-studio-code-100.jpg";
+import npm from "../assets/icons/icons8-npm-100.jpg";
+import java from "../assets/icons/icons8-java-100.jpg";
 
 
 const IconStrip = ({ icons }) => {

@@ -1,6 +1,6 @@
 import ProfileCard from "../customComp/ProjectCard";
-import hospital from "../assets/images/hp~2.png";
-import rocks from "../assets/images/rocks2.png";
+import hospital from "../assets/images/hp.jpg";
+import rocks from "../assets/images/rocks2.jpg";
 
 const Project = () => {
   return (

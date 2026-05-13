@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import img1 from "../assets/images/srled2.png";
-import img2 from "../assets/images/ddfs.png";
-import img3 from "../assets/images/ghc.png";
-import img4 from "../assets/images/fined23.png";
-import img5 from "../assets/images/fr33.png";
+import img1 from "../assets/images/srled2.jpg";
+import img2 from "../assets/images/ddfs.jpg";
+import img3 from "../assets/images/ghc.jpg";
+import img4 from "../assets/images/Fined23.jpg";
+import img5 from "../assets/images/fr33.jpg";
 import vid1 from "../assets/images/box.mp4";
 import vid2 from "../assets/images/learning.mp4";
-import img6 from "../assets/images/bba.png"
+import img6 from "../assets/images/bba.jpg"
 
 const MEDIA = [img6,img1,img2, vid1, img3, img4, vid2, img5];
 
