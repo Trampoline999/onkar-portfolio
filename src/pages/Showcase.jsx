@@ -63,7 +63,7 @@ const Showcase = () => {
   return (
     <section id="showcase" className="relative w-full py-10 sm:py-32 overflow-hidden flex flex-col justify-center items-center">
       
-      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl underline decoration-wavy underline-offset-10 decoration-gray-900 dark:decoration-gray-200 text-center mb-16 sm:mb-24 lg:mb-32">
+      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl underline decoration-wavy underline-offset-10 decoration-gray-900 dark:decoration-gray-200 text-center mb-16 sm:mb-16 lg:mb-16">
         Showcase
       </h1>
 

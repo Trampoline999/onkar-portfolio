@@ -2,7 +2,7 @@ import { useRef } from "react";
 import learning from "../assets/images/learning.mp4";
 import fr32Video from "../assets/images/fr32.mp4";
 import handVideo from "../assets/images/hand.mp4";
-import guyVideo from "../assets/images/guy.mp4";
+import guyVideo from "../assets/images/sidhuWithAudio.mp4";
 import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const CARDS = [
@@ -21,7 +21,7 @@ const CARDS = [
   {
     id: 3,
     category: "Designing",
-    title: "Boomboxing\n and Studying.",
+    title: "Vibing\n With Moosewala.",
     video: guyVideo,
   },
   {
