@@ -17,7 +17,7 @@ const Hero = () => {
           style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
         />
         <div
-          className="inline-flex items-center gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-black dark:text-gray-50 px-2 py-1 sm:px-3 sm:py-2 rounded-xl"
+          className="inline-flex items-center gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-black dark:text-gray-50 px-2 py-1 sm:px-3 sm:py-2 rounded-full"
           style={{
             background: "rgba(255,255,255,0.15)",
             backdropFilter: "blur(8px)",
