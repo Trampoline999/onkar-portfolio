@@ -22,7 +22,7 @@ const ProfileCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="w-full bg-[#f0f0f0] dark:bg-zinc-800 rounded-[28px] p-2.5 flex flex-col gap-3 shadow-sm">
+    <div className="w-full bg-[#f0f0f0] border-1 border-[#f0f0f0] dark:bg-zinc-800 dark:border-zinc-600 rounded-[28px] p-2.5 flex flex-col gap-3 shadow-sm">
       {/* Image / Video */}
       <div
         className="relative w-full rounded-[20px] overflow-hidden shrink-0"

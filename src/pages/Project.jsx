@@ -48,10 +48,10 @@ const Project = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-24 sm:mt-32 w-full max-w-7xl mx-auto">
-        <h2 className="font-bricolage font-semibold text-black dark:text-white text-3xl sm:text-4xl lg:text-5xl mb-12 sm:mb-16">
+        <h2 className="font-bricolage font-semibold text-black  dark:text-white text-3xl sm:text-4xl lg:text-5xl mb-12 sm:mb-16">
           GitHub Contributions
         </h2>
-        <div ref={scrollRef} className="w-full flex justify-center p-6 sm:p-10 bg-[#f0f0f0] dark:bg-zinc-800 rounded-[28px] shadow-sm overflow-x-auto">
+        <div ref={scrollRef} className="w-full flex justify-center p-6 sm:p-10 bg-[#f0f0f0]  border-1 border-[#f0f0f0] dark:border-zinc-600 dark:bg-zinc-800 rounded-[28px] shadow-sm overflow-x-auto">
           <div className="min-w-fit">
             <GitHubCalendar 
               username="Trampoline999" 
