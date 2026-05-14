@@ -25,7 +25,7 @@ const Skill = () => {
               loop
             />
           </h1>
-          <p className="font-bricolage text-neutral-700 dark:text-neutral-300 text-base md:text-xl mt-6 mb-6 max-w-2xl mx-auto">
+          <p className="font-bricolage text-neutral-700 dark:text-neutral-300 text-base md:text-xl mt-8 mb-4 max-w-2xl mx-auto">
             Exploring the intersection of technology and creativity through
             innovative solutions.
           </p>

@@ -57,7 +57,7 @@ const Carousel = () => {
         {CARDS.map((card) => (
           <div
             key={card.id}
-            className="relative w-[85vw] sm:w-[380px] md:w-[420px] h-[550px] md:h-[650px] shrink-0 rounded-[32px] overflow-hidden snap-start border-4 border-white"
+            className="relative w-[85vw] sm:w-[380px] md:w-[420px] h-[550px] md:h-[650px] shrink-0 rounded-[32px] overflow-hidden snap-start border-4 border-white dark:border-gray-200"
           >
             <video
               src={card.video}

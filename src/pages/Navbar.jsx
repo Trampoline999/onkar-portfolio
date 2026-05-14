@@ -6,9 +6,9 @@ const BRAND_NAME = "Onkar Chougule";
 const NAV_LINKS = [
   { label: "Education", id: "education" },
   { label: "Skills", id: "skills" },
-  { label: "Design", id: "design" },
   { label: "Projects", id: "projects" },
-  {label:"Showcase",id:"showcase"}
+  { label: "Design", id: "design" },
+  {label:"Contact",id:"contact"}
 ];
 
 const GLASS_STYLE = {

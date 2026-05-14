@@ -31,7 +31,7 @@ const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
       </div>
 
       {/* The Polaroid Card */}
-      <div className="bg-white dark:bg-gray-100 p-2 sm:p-3 pb-6 sm:pb-8 rounded-xl shadow-xl border border-gray-100 dark:border-gray-200 w-[200px] sm:w-[240px] md:w-[280px] lg:w-[320px] aspect-[4/3] flex flex-col">
+      <div className="bg-gray-100 dark:bg-gray-200 p-2 sm:p-3 pb-6 sm:pb-8 rounded-xl shadow-xl border border-gray-100 dark:border-gray-200 w-[200px] sm:w-[240px] md:w-[280px] lg:w-[320px] aspect-[4/3] flex flex-col">
         <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-200 relative">
           {isVideo ? (
             <video 
@@ -106,6 +106,13 @@ const Showcase = () => {
         </div>
 
       </div>
+
+      {/* Description */}
+      <p className="mt-12 sm:mt-16 max-w-xl sm:max-w-2xl text-center px-6 font-bricolage text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
+        Each piece is sculpted entirely in Blender — from concept to final render.<br />
+        I explore light, texture, and form to create scenes that feel tactile and alive.<br />
+        3D art is where my technical precision meets pure creative expression.
+      </p>
     </section>
   );
 };

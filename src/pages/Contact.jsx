@@ -38,7 +38,7 @@ const contactItems = [
     value: "@onkarchougule99",
     href: "https://twitter.com/onkarchougule99",
     colSpan: "md:col-span-2",
-    bg: "bg-yellow-200 dark:bg-yellow-300",
+    bg: "bg-emerald-200 dark:bg-emerald-300",
     description: "Thoughts & updates",
   },
   {
@@ -48,7 +48,7 @@ const contactItems = [
     value: "View My Resume",
     href: "https://drive.google.com/file/d/11scqOdmXEz2XDUm3K97kb0Us0bELQkL5/view?usp=sharing",
     colSpan: "md:col-span-2",
-    bg: "bg-emerald-200 dark:bg-emerald-300",
+    bg: "bg-amber-200 dark:bg-amber-300",
     description: "Download or view online",
   },
 ];
