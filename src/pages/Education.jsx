@@ -14,6 +14,7 @@ const Education = () => {
         <div
           className="
             bg-[#e9ece9]
+            dark:bg-zinc-300
             rounded-[28px]
             shadow-[0_20px_40px_15px_rgba(0,0,0,0.1)]
             w-full mx-auto max-w-7xl
@@ -30,11 +31,11 @@ const Education = () => {
 
           {/* Text */}
           <div className="flex flex-col text-left gap-2 max-w-2xl sm:items-center md:items-center md:text-center  lg:items-start lg:text-left">
-            <h1 className="text-grey-900 text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold font-bricolage dark:text-black">
+            <h1 className="text-gray-900  text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold font-bricolage">
               D.Y Patil College of <br />
               Engineering and Technology
             </h1>
-            <p className=" pb-2 text-xs sm:text-sm md:text-l lg:text-lg leading-relaxed text-gray-700">
+            <p className="pb-2 text-xs sm:text-sm md:text-l lg:text-lg leading-relaxed text-gray-700 ">
               A four-year <Highlighter action="highlight" color="#95c8f3">
                 Computer Science & Engineering
               </Highlighter>{" "} journey at D.Y. Patil College of Engineering & Technology, Kolhapur, completed between <Highlighter action="underline" color="#ff9a00">2019-2024</Highlighter>{" "} graduating with a <Highlighter action="highlight" color="#b9f5a0">CGPA of 7.76</Highlighter> and a passion for building real-world applications.
