@@ -110,7 +110,7 @@ export default function Navbar() {
       <div className="sm:hidden w-full max-w-sm relative z-20">
         {/* Mobile Pill Bar */}
         <nav
-          className="flex items-center justify-between gap-4 px-6 py-2 rounded-full"
+          className="flex items-center justify-between gap-4 px-4 py-1 rounded-full"
           style={GLASS_STYLE}
         >
           <span className="text-sm font-semibold text-black dark:text-white">

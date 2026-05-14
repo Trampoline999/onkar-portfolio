@@ -31,7 +31,7 @@ const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
       </div>
 
       {/* The Polaroid Card */}
-      <div className="bg-gray-100 dark:bg-gray-200 p-2 sm:p-3 pb-6 sm:pb-8 rounded-xl shadow-xl border border-gray-100 dark:border-gray-200 w-[200px] sm:w-[240px] md:w-[280px] lg:w-[320px] aspect-[4/3] flex flex-col">
+      <div className="bg-gray-100 dark:bg-zinc-800 p-2 sm:p-3 pb-6 sm:pb-8 rounded-xl shadow-xl border border-gray-100 dark:border-gray-400 w-[200px] sm:w-[240px] md:w-[280px] lg:w-[320px] aspect-[4/3] flex flex-col">
         <div className="w-full flex-1 rounded-lg overflow-hidden bg-gray-100 dark:bg-gray-200 relative">
           {isVideo ? (
             <video 
