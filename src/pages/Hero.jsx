@@ -37,15 +37,12 @@ const Hero = () => {
           interactions, and products that feel alive.
         </p>
         <div className="mt-8 w-full max-w-md">
-          <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-3">
-            <input
-              type="email"
-              placeholder="enter your mail"
-              className="w-full sm:w-1/2 rounded-lg border border-black/20 dark:border-white/20 bg-black/5 dark:bg-white/10 px-3 py-2 text-sm text-black dark:text-white placeholder:text-black/50 dark:placeholder:text-white/50 outline-none backdrop-blur-sm"
-            />
-            <InteractiveHoverButton className="w-full sm:w-auto rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-6 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition ">
-              Contact
-            </InteractiveHoverButton>
+          <div className="flex justify-center items-center">
+            <a href="mailto:onkarchougule99@gmail.com" className="w-full sm:w-auto">
+              <InteractiveHoverButton className="w-full sm:w-auto rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-6 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition ">
+                Email Me
+              </InteractiveHoverButton>
+            </a>
           </div>
         </div>
       </div>
