@@ -17,7 +17,7 @@ const Hero = () => {
           style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
         />
         <div
-          className="inline-flex items-center gap-2 text-[10px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-black dark:text-gray-50 px-3 py-2 rounded-full"
+          className="inline-flex items-center gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-3 sm:mb-4 text-black dark:text-gray-50 px-2 py-1 sm:px-3 sm:py-2 rounded-full"
           style={{
             background: "rgba(255,255,255,0.15)",
             backdropFilter: "blur(8px)",
@@ -26,16 +26,16 @@ const Hero = () => {
           }}
         >
           {/* Blinking green dot */}
-          <span className="relative flex h-2 w-2">
+          <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500" />
+            <span className="relative inline-flex h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-green-500" />
           </span>
           Available for work
         </div>
 
         <SplitText
           text="Onkar Chougule"
-          className="font-instrument-spaced tracking-wide text-4xl sm:text-2xl md:text-6xl lg:text-8xl font-bold text-black dark:text-gray-100 mb-3 sm:mb-5 leading-tight"
+          className="font-instrument-spaced tracking-wide text-5xl sm:text-3xl md:text-6xl lg:text-8xl font-bold text-black dark:text-gray-100 mb-3 sm:mb-5 leading-tight"
         />
         <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-700 dark:text-neutral-300 tracking-wide leading-tight font-sans">
           I love building things that work beautifully — clean code, smooth
