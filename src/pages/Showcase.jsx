@@ -109,8 +109,8 @@ const Showcase = () => {
 
       {/* Description */}
       <p className="mt-12 sm:mt-16 max-w-xl sm:max-w-2xl text-center px-6 font-bricolage text-sm sm:text-base md:text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed">
-        Each piece is sculpted entirely in Blender — from concept to final render.<br />
-        I explore light, texture, and form to create scenes that feel tactile and alive.<br />
+        Each piece is sculpted entirely in Blender — from concept to final render.<br/>
+        I explore light, texture, and form to create scenes that feel tactile and alive.
         3D art is where my technical precision meets pure creative expression.
       </p>
     </section>

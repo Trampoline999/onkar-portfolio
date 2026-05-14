@@ -17,11 +17,12 @@ import postmanIcon from "../assets/icons/Postman Icons 48.png";
 import linuxIcon from "../assets/icons/Linux Icons 48.png";
 import sshIcon from "../assets/icons/SSH Icons.png";
 import npmIcon from "../assets/icons/npm Icons 48.png";
-import mysqlIcon from "../assets/icons/MySQL Logo 48.png";
+import mysqlIcon from "../assets/icons/MySQL Logo Icon 96.png";
 import postgresqlIcon from "../assets/icons/PostgreSQL Icon 48.png";
 import sqlIcon from "../assets/icons/SQL Icon 48.png";
 import jsonIcon from "../assets/icons/JSON Icon Set.png";
 import jsonwebtokenIcon from "../assets/icons/JSON Web Token 48.png";
+import mongodbIcon from "../assets/icons/MongoDB Icons.png";
 
 const IconStrip = ({ icons }) => {
   return (
@@ -74,7 +75,8 @@ const TechnicalSkills = () => {
                 { src: jsIcon, alt: "JavaScript" },
                 { src: tsIcon, alt: "TypeScript" },
                 { src: langIcon, alt: "Programming Languages" },
-                { src: mysqlIcon, alt: "MySQL" },
+                { src: sqlIcon, alt: "SQL" },
+               
                 { src: htmlIcon, alt: "HTML" },
                 { src: cssIcon, alt: "CSS" },                
               ]} />}
@@ -93,7 +95,8 @@ const TechnicalSkills = () => {
                 { src: linuxIcon, alt: "Linux" },
                 { src: sshIcon, alt: "SSH" },
                 {src:npmIcon, alt: "NPM"},
-                {src:jsonwebtokenIcon, alt: "JSON Web Token"}
+                {src:jsonwebtokenIcon, alt: "JSON Web Token"},
+                { src: jsonIcon, alt: "JSON" }
               ]} />}
             />
 
@@ -104,8 +107,10 @@ const TechnicalSkills = () => {
               footer={<IconStrip icons={[
                 
                 { src: postgresqlIcon, alt: "PostgreSQL" },
-                { src: sqlIcon, alt: "SQL" },
-                { src: jsonIcon, alt: "JSON" }
+                { src: mysqlIcon, alt: "MySQL" },
+                {src:mongodbIcon, alt: "MongoDB"}
+                
+                
               ]} />}
             />
           </BentoGrid>

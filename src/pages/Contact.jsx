@@ -60,12 +60,12 @@ const ContactCard = ({ id, icon: Icon, label, value, href, colSpan, bg, descript
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-3xl p-4 sm:p-6 md:rounded-4xl md:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${bg} ${colSpan}`}
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl p-3 sm:p-6 md:rounded-4xl md:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${bg} ${colSpan}`}
     >
       {/* Top row */}
       <div className="flex items-start justify-between">
-        <div className="flex h-9 w-9 sm:h-12 sm:w-12 items-center justify-center rounded-xl sm:rounded-2xl bg-black/10 dark:bg-black/15 backdrop-blur-sm">
-          <Icon className="h-4 w-4 sm:h-6 sm:w-6 text-gray-900 dark:text-gray-900" strokeWidth={1.8} />
+        <div className="flex h-7 w-7 sm:h-12 sm:w-12 items-center justify-center rounded-lg sm:rounded-2xl bg-black/10 dark:bg-black/15 backdrop-blur-sm">
+          <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-gray-900 dark:text-gray-900" strokeWidth={1.8} />
         </div>
         <ArrowUpRight
           className="h-5 w-5 text-gray-700 dark:text-gray-800 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
@@ -74,14 +74,14 @@ const ContactCard = ({ id, icon: Icon, label, value, href, colSpan, bg, descript
       </div>
 
       {/* Bottom content */}
-      <div className="mt-4 sm:mt-8 space-y-0.5 sm:space-y-1">
-        <p className="text-[10px] sm:text-[11px] font-medium uppercase tracking-widest text-gray-600 dark:text-gray-700">
+      <div className="mt-2 sm:mt-8 space-y-0.5 sm:space-y-1">
+        <p className="text-[9px] sm:text-[11px] font-medium uppercase tracking-widest text-gray-600 dark:text-gray-700">
           {label}
         </p>
-        <h3 className="font-bricolage text-sm sm:text-xl font-semibold leading-tight text-gray-900 dark:text-gray-900 md:text-2xl">
+        <h3 className="font-bricolage text-xs sm:text-xl font-semibold leading-tight text-gray-900 dark:text-gray-900 md:text-2xl">
           {description}
         </h3>
-        <p className="font-bricolage text-xs text-gray-700 dark:text-gray-800 sm:text-sm truncate">
+        <p className="font-bricolage text-[10px] text-gray-700 dark:text-gray-800 sm:text-sm truncate">
           {value}
         </p>
       </div>

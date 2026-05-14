@@ -36,12 +36,14 @@ const Project = () => {
           name="Codewar"
           description="Codewar is a full-stack coding platform built with the MERN stack that allows users to write and execute code in real-time using the Judge0 API. It features authentication, problem categorization, difficulty filters, and playlist management backed by PostgreSQL and Prisma ORM. Global state is handled efficiently with Zustand, ensuring smooth user experience across all components. The UI is built with TailwindCSS and DaisyUI for a clean, responsive, and intuitive interface."
           techstack="PostgreSQL, JavaScript, REST APIs, Zustand, TailwindCSS, Express, React, Node.js, Prisma ORM, Judge0 API"
+          githubLink="https://github.com/Trampoline999/codewar"
         />
         <ProfileCard
           imageSrc={hospital}
           name="Hospital Management"
           description="A centralized healthcare platform that connects patients, doctors, and hospitals under one unified system. It supports patient registration, appointment scheduling, and Electronic Health Record (EHR) management for streamlined clinical workflows. Admin panels provide hospital management capabilities along with statistical dashboards for data-driven decisions. Future modules are planned for blood bank tracking and real-time bed availability monitoring."
           techstack="Python, Django, PostgreSQL, JavaScript, REST APIs, Bootstrap, HTML Templates"
+          githubLink="https://github.com/Trampoline999/hospital_management_system"
         />      
       </div>
 
@@ -49,7 +51,7 @@ const Project = () => {
         <h2 className="font-bricolage font-semibold text-black dark:text-white text-3xl sm:text-4xl lg:text-5xl mb-12 sm:mb-16">
           GitHub Contributions
         </h2>
-        <div ref={scrollRef} className="w-full flex justify-center p-6 sm:p-10 bg-[#f0f0f0] rounded-[28px] shadow-sm overflow-x-auto">
+        <div ref={scrollRef} className="w-full flex justify-center p-6 sm:p-10 bg-[#f0f0f0] dark:bg-zinc-700 rounded-[28px] shadow-sm overflow-x-auto">
           <div className="min-w-fit">
             <GitHubCalendar 
               username="Trampoline999" 

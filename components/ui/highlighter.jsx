@@ -8,8 +8,8 @@ export function Highlighter({
   color = "#ffd1dc",
   strokeWidth = 1.5,
   animationDuration = 600,
-  iterations = 2,
-  padding = 2,
+  iterations = 1,
+  padding = 0.5,
   multiline = true,
   isView = false
 }) {
