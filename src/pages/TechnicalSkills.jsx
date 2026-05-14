@@ -1,18 +1,32 @@
-import { BentoCard, BentoGrid } from "../customComp/BentoGrid";
-import reactIcon from "../assets/icons/icons8-react-100.jpg";
-import tailwindIcon from "../assets/icons/icons8-tailwind-css-100.jpg";
-import jsIcon from "../assets/icons/icons8-javascript-100.jpg";
-import cssIcon from "../assets/icons/icons8-css-100.jpg";
-import dockerIcon from "../assets/icons/icons8-docker-100.jpg";
-import vscodeIcon from "../assets/icons/icons8-visual-studio-code-100.jpg";
-import npm from "../assets/icons/icons8-npm-100.jpg";
-import java from "../assets/icons/icons8-java-100.jpg";
-
+import { BentoGrid, BentoCard } from "../customComp/BentoGrid";
+import reactIcon from "../assets/icons/React Icon 48.png";
+import tailwindIcon from "../assets/icons/Tailwind CSS Icon 48.png";
+import viteIcon from "../assets/icons/Vite Icon 48.png";
+import expressIcon from "../assets/icons/ExpressJS Icons.png";
+import nodeIcon from "../assets/icons/Node.js Icon 48.png";
+import jsIcon from "../assets/icons/JavaScript Icon.png";
+import tsIcon from "../assets/icons/Typescript Icon 48.png";
+import htmlIcon from "../assets/icons/HTML Icons.png";
+import cssIcon from "../assets/icons/CSS3 Icon.png";
+import langIcon from "../assets/icons/Programming Language Icon.png";
+import dockerIcon from "../assets/icons/Docker Icon 48.png";
+import figmaIcon from "../assets/icons/Figma Icon 48.png";
+import githubIcon from "../assets/icons/Github Icons 48.png";
+import gitIcon from "../assets/icons/React Git Icon 48.png";
+import postmanIcon from "../assets/icons/Postman Icons 48.png";
+import linuxIcon from "../assets/icons/Linux Icons 48.png";
+import sshIcon from "../assets/icons/SSH Icons.png";
+import npmIcon from "../assets/icons/npm Icons 48.png";
+import mysqlIcon from "../assets/icons/MySQL Logo 48.png";
+import postgresqlIcon from "../assets/icons/PostgreSQL Icon 48.png";
+import sqlIcon from "../assets/icons/SQL Icon 48.png";
+import jsonIcon from "../assets/icons/JSON Icon Set.png";
+import jsonwebtokenIcon from "../assets/icons/JSON Web Token 48.png";
 
 const IconStrip = ({ icons }) => {
   return (
     <div
-      className="mt-5 flex max-w-full flex-row flex-wrap gap-3 overflow-x-auto pb-1"
+      className="mt-3 flex max-w-full flex-row flex-wrap gap-1 sm:gap-2 overflow-x-auto pb-1"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       <style>{`div::-webkit-scrollbar { display: none; }`}</style>
@@ -20,9 +34,9 @@ const IconStrip = ({ icons }) => {
       {icons.map(({ src, alt }) => (
         <div
           key={alt}
-          className="h-14 w-14 shrink-0 overflow-hidden rounded-xl border-4 border-white bg-white/30 backdrop-blur-sm"
+          className="h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 shrink-0 overflow-hidden"
         >
-          <img src={src} alt={alt} className="h-full w-full object-contain p-2" />
+          <img src={src} alt={alt} className="h-full w-full object-contain p-1.5" />
         </div>
       ))}
     </div>
@@ -41,33 +55,58 @@ const TechnicalSkills = () => {
           <BentoGrid>
             <BentoCard
               className="md:col-span-4 bg-pink-300 dark:bg-pink-100"             
-              title="Frontend"            
-              description="React, Tailwind, shadcn/ui — clean layouts, strong typography, and reusable components."
-              footer={<IconStrip icons={[{ src: reactIcon, alt: "React" },, { src: cssIcon, alt: "CSS" }, { src: tailwindIcon, alt: "Tailwind CSS" }]} />}
+              title="Frameworks & Libraries"            
+              description="React, Express, Tailwind, and Vite — building robust, scalable, and responsive applications."
+              footer={<IconStrip icons={[
+                { src: reactIcon, alt: "React" },
+                { src: tailwindIcon, alt: "Tailwind CSS" },
+                { src: viteIcon, alt: "Vite" },
+                { src: expressIcon, alt: "Express JS" },
+                { src: nodeIcon, alt: "Node.js" }
+              ]} />}
             />
 
             <BentoCard
               className="md:col-span-2 bg-indigo-300 dark:bg-indigo-100"              
-              title="Programming"          
-              description="GSAP + Motion for delightful micro-interactions and scroll-based storytelling."
-              footer={<IconStrip icons={[{ src: jsIcon, alt: "JavaScript" },{ src: java, alt: "java" }]} />}
+              title="Programming Languages"          
+              description="JavaScript, TypeScript, HTML, and CSS for structuring and scripting dynamic web experiences."
+              footer={<IconStrip icons={[
+                { src: jsIcon, alt: "JavaScript" },
+                { src: tsIcon, alt: "TypeScript" },
+                { src: langIcon, alt: "Programming Languages" },
+                { src: mysqlIcon, alt: "MySQL" },
+                { src: htmlIcon, alt: "HTML" },
+                { src: cssIcon, alt: "CSS" },                
+              ]} />}
             />
 
             <BentoCard
               className="md:col-span-3 bg-orange-300 dark:bg-orange-100"
-              
-              title="Frameworks"
-             
-              description="ShaderGradient, React Three Fiber, camera-controls — performant, interactive scenes."
-              footer={<IconStrip icons={[{ src: reactIcon, alt: "React" }, { src: jsIcon, alt: "JavaScript" }]} />}
+              title="Tools & Platforms"
+              description="Docker, Git, GitHub, Figma, and Linux — modern tooling for streamlined development and collaboration."
+              footer={<IconStrip icons={[
+                { src: figmaIcon, alt: "Figma" },
+                { src: githubIcon, alt: "GitHub" },
+                { src: gitIcon, alt: "Git" },
+                { src: dockerIcon, alt: "Docker" },
+                { src: postmanIcon, alt: "Postman" },
+                { src: linuxIcon, alt: "Linux" },
+                { src: sshIcon, alt: "SSH" },
+                {src:npmIcon, alt: "NPM"},
+                {src:jsonwebtokenIcon, alt: "JSON Web Token"}
+              ]} />}
             />
 
             <BentoCard
               className="md:col-span-3 bg-emerald-300 dark:bg-emerald-100"
-          
-              title="Backend"
-              description="Vite + ESLint, component-driven workflows, and consistent UI primitives."
-              footer={<IconStrip icons={[{ src: npm, alt: "npm" },{ src: dockerIcon, alt: "Docker" }, { src: vscodeIcon, alt: "VS Code" }]} />}
+              title="Database & ORM"
+              description="MySQL, PostgreSQL, and SQL — managing data with efficient and reliable database systems."
+              footer={<IconStrip icons={[
+                
+                { src: postgresqlIcon, alt: "PostgreSQL" },
+                { src: sqlIcon, alt: "SQL" },
+                { src: jsonIcon, alt: "JSON" }
+              ]} />}
             />
           </BentoGrid>
 

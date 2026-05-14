@@ -6,6 +6,7 @@ import Skill from "./pages/Skill";
 import TechnicalSkills from "./pages/TechnicalSkills";
 import Project from "./pages/Project";
 import Showcase from "./pages/Showcase";
+import Contact from "./pages/Contact";
 
 export default function App() {
   return (
@@ -14,9 +15,9 @@ export default function App() {
       <Education />
       <TechnicalSkills />
       <Project />
-      <Skill />
-      
+      <Skill />     
        <Showcase />
+       <Contact />
     </Layout>
   );
 }
