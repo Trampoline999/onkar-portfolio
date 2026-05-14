@@ -38,8 +38,8 @@ const Hero = () => {
         </p>
         <div className="mt-8 w-full max-w-md">
           <div className="flex justify-center items-center">
-            <a href="mailto:onkarchougule99@gmail.com" className="w-full sm:w-auto">
-              <InteractiveHoverButton className="w-full sm:w-auto rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-6 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition ">
+            <a href="https://mail.google.com/mail/?view=cm&to=onkarchougule99@gmail.com">
+              <InteractiveHoverButton className="rounded-lg border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-6 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition ">
                 Email Me
               </InteractiveHoverButton>
             </a>
