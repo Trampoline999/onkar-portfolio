@@ -7,7 +7,7 @@ const Skill = () => {
     <section id="design" className="flex flex-col items-center justify-center w-full py-4 px-4 sm:px-6 md:px-10 lg:px-12">
       <div className="w-full max-w-7xl mx-auto py-16">
         <div className="text-center mb-6 md:mb-8">
-          <h1 className="font-instrument flex flex-wrap items-baseline justify-center gap-x-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wide leading-tight md:flex-nowrap md:justify-center">
+          <h1 className="font-instrument-spaced flex flex-wrap items-baseline justify-center gap-x-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wide leading-tight md:flex-nowrap md:justify-center">
             <span className="whitespace-nowrap text-black dark:text-gray-100">3D Blender</span>
             <RotatingText
               texts={words}

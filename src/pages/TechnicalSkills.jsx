@@ -49,7 +49,7 @@ const TechnicalSkills = () => {
     <section id="skills" className="flex w-full flex-col items-center my-20 lg:my-30">
       <div className="w-full px-4 sm:px-6 md:px-10">
         <div className="mx-auto w-full max-w-7xl">
-          <h2 className="text-black dark:text-gray-100 mb-16 text-center font-instrument text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl lg:text-7xl underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200">
+          <h2 className="text-black dark:text-gray-100 mb-16 text-center font-instrument-spaced text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl lg:text-7xl underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200">
             Technical Skills
           </h2>
 
