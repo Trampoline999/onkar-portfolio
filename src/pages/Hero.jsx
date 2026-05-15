@@ -1,7 +1,6 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import mac from "../assets/images/mac.json";
 import { InteractiveHoverButton } from "../../components/ui/interactive-hover-button"
-import { motion } from "motion/react";
 import RetroIcons from "../../components/RetroIcons";
 
 /* Repeat enough times so the seamless-loop duplicate fills any screen width */
