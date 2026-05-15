@@ -13,6 +13,21 @@
   src: url('./assets/fonts/0-MonoLisa-normal.woff2') format('woff2'),
 }
 
+/* Smooth theme transition */
+*,
+*::before,
+*::after {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Prevent transitions from breaking marquee animations */
+.hero-marquee-track,
+.animate-hanging-marquee,
+.hero-marquee-track *,
+.animate-hanging-marquee * {
+  transition: none !important;
+}
+
 
 
 
@@ -204,8 +219,13 @@
 
 /* Hero name horizontal loop */
 @keyframes hero-marquee {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .hero-marquee-track {
