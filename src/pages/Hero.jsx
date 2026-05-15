@@ -1,6 +1,8 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import mac from "../assets/images/mac.json";
 import { InteractiveHoverButton } from "../../components/ui/interactive-hover-button"
+import { motion } from "motion/react";
+import RetroIcons from "../../components/RetroIcons";
 
 /* Repeat enough times so the seamless-loop duplicate fills any screen width */
 const REPEATS = 8;
@@ -22,18 +24,23 @@ const Hero = () => {
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden">
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col  items-center justify-center min-h-full text-center px-6 sm:px-10">
-        <Player
-          src={mac}
-          className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain -my-4 sm:-my-8"
-          autoplay
-          loop
-          style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
-        />
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10">
+        <div className="relative flex items-center justify-center">
+          {/* Retro Icons - Standalone Component */}
+          <RetroIcons />
+
+          <Player
+            src={mac}
+            className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain -my-4 sm:-my-8 relative z-10"
+            autoplay
+            loop
+            style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
+          />
+        </div>
 
         {/* Available badge */}
         <div
-          className="inline-flex items-center justify-center gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-gray-50 px-2 py-1 sm:px-3 sm:py-2 rounded-full"
+          className="inline-flex items-center justify-center gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2 py-1 sm:px-3 sm:py-2 rounded-full"
           style={{
             background: "rgba(255,255,255,0.15)",
             backdropFilter: "blur(8px)",
