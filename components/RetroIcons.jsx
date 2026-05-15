@@ -1,5 +1,5 @@
- import React from 'react';
-import { motion } from "motion/react";
+ import React, { useEffect, useRef } from 'react';
+import anime from 'animejs';
 
 const FolderIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" className="w-full h-full" fill="currentColor">
@@ -174,54 +174,76 @@ const RETRO_ICONS = [
 ];
 
 const RetroIcons = () => {
+  const iconRefs = useRef([]);
+  const floatRefs = useRef([]);
+
+  useEffect(() => {
+    // Entrance animation
+    RETRO_ICONS.forEach((_, index) => {
+      const totalIcons = RETRO_ICONS.length;
+      const startAngle = 165;
+      const endAngle = 15;
+      const angle = startAngle - (index / (totalIcons - 1)) * (startAngle - endAngle);
+      const radian = (angle * Math.PI) / 180;
+      const radius = "clamp(100px, 30vw, 180px)";
+
+      // Initial state set in CSS/inline style
+      
+      // Animate entrance
+      anime({
+        targets: iconRefs.current[index],
+        scale: [0, 1],
+        opacity: [0, 1],
+        translateX: [
+          "-50%",
+          `calc(-50% + (${Math.cos(radian)} * ${radius}) - 10px)`
+        ],
+        translateY: [
+          "-50%",
+          `calc(-50% - (${Math.sin(radian)} * ${radius}))`
+        ],
+        easing: 'easeOutElastic(1, .8)',
+        duration: 1200,
+        delay: 200 + index * 100,
+      });
+
+      // Floating animation
+      anime({
+        targets: floatRefs.current[index],
+        translateY: [0, -10],
+        direction: 'alternate',
+        loop: true,
+        easing: 'easeInOutQuad',
+        duration: 1500,
+        delay: index * 200,
+      });
+    });
+  }, []);
+
   return (
     <>
-      {RETRO_ICONS.map((icon, index) => {
-        const totalIcons = RETRO_ICONS.length;
-        const startAngle = 165;
-        const endAngle = 15;
-        const angle = startAngle - (index / (totalIcons - 1)) * (startAngle - endAngle);
-        const radian = (angle * Math.PI) / 180;
-        const radius = "clamp(100px, 30vw, 180px)";
-
-        return (
-          <motion.div
-            key={`float-${index}`}
-            className="absolute w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 pointer-events-none z-[-1] left-1/2 top-1/2 text-black dark:text-white transition-colors duration-300"
-            initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
-            animate={{
-              scale: 1,
-              x: `calc(-50% + (${Math.cos(radian)} * ${radius}) - 10px)`,
-              y: `calc(-50% - (${Math.sin(radian)} * ${radius}))`,
-              opacity: 1,
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 15,
-              delay: 0.2 + index * 0.1,
+      {RETRO_ICONS.map((icon, index) => (
+        <div
+          key={`icon-wrapper-${index}`}
+          ref={(el) => (iconRefs.current[index] = el)}
+          className="absolute w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 pointer-events-none z-[-1] left-1/2 top-1/2 text-black dark:text-white transition-colors duration-300"
+          style={{
+            transformOrigin: 'center',
+            opacity: 0,
+            transform: 'scale(0) translate(-50%, -50%)',
+          }}
+        >
+          <div
+            ref={(el) => (floatRefs.current[index] = el)}
+            className="w-full h-full"
+            style={{
+              filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.1))",
             }}
           >
-            <motion.div
-              className="w-full h-full"
-              animate={{ 
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: index * 0.2,
-              }}
-              style={{
-                filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.1))",             
-              }}
-            >
-              {icon}
-            </motion.div>
-          </motion.div>
-        );
-      })}
+            {icon}
+          </div>
+        </div>
+      ))}
     </>
   );
 };
