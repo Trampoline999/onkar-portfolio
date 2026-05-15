@@ -20,7 +20,7 @@ const NameStrip = () => (
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[80vh] flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10">
         <Player
@@ -50,7 +50,7 @@ const Hero = () => {
 
         {/* ── Horizontal looping name marquee ── */}
         <div
-          className="w-screen overflow-hidden -mx-6 sm:-mx-10 mb-4 sm:mb-6 py-1"
+          className="w-screen overflow-hidden -mx-6 sm:-mx-10 mb-4 sm:mb-6 py-2"
           style={{
             /* fade edges so the loop feels infinite */
             WebkitMaskImage:
