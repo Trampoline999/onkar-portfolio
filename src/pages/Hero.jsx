@@ -35,7 +35,7 @@ const Hero = () => {
 
         <SplitText
           text="Onkar Chougule"
-          className="font-instrument-spaced tracking-wide text-5xl sm:text-3xl md:text-6xl lg:text-8xl font-bold text-black dark:text-gray-100 mb-3 sm:mb-5 leading-tight"
+          className="font-monolisa tracking-[-0.1em] text-5xl sm:text-3xl md:text-6xl lg:text-8xl font-black text-black dark:text-gray-100 mb-3 sm:mb-5 leading-tight p-2"
         />
         <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-700 dark:text-neutral-300 tracking-wide leading-tight font-sans">
           I love building things that work beautifully — clean code, smooth

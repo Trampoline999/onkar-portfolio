@@ -5,7 +5,6 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
-
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
@@ -13,13 +12,16 @@
   src: url('./assets/fonts/0-MonoLisa-normal.woff2') format('woff2'),
 }
 
+
+
+
 @theme {
   /* This creates the 'font-mono-lisa' utility class */
   --font-monolisa: "Monolisa", monospace;
   --font-bricolage: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
 
   /* OPTIONAL: To make it the default global font for the whole app */
-  --font-sans: "Inter var", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "inter var", ui-sans-serif, system-ui, sans-serif;
   --font-instrument: "Instrument Serif", serif;
 }
 
