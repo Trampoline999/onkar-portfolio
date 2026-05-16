@@ -16,7 +16,7 @@ const contactItems = [
     icon: Globe,
     label: "LinkedIn",
     value: "linkedin.com/in/onkarchougule06",
-    href: "https://www.linkedin.com/in/onkarchougule06/",
+    href: "https://www.linkedin.com/in/onkar-chougule01",
     colSpan: "md:col-span-3",
     bg: "bg-sky-200 dark:bg-sky-300",
     description: "Let's connect professionally",
