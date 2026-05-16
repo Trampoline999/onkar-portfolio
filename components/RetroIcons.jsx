@@ -182,7 +182,7 @@ const RetroIcons = () => {
         const endAngle = 15;
         const angle = startAngle - (index / (totalIcons - 1)) * (startAngle - endAngle);
         const radian = (angle * Math.PI) / 180;
-        const radius = "clamp(100px, 30vw, 180px)";
+        const radius = "clamp(140px, 18vw, 190px)";
 
         return (
           <motion.div

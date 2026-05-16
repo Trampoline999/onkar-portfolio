@@ -21,16 +21,16 @@ const NameStrip = () => (
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden scroll-mt-24">
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10">
-        <div className="relative flex items-center justify-center">
+      <div className="relative z-10 flex flex-col items-center justify-start min-h-full text-center px-6 sm:px-10 pt-48 sm:pt-50 lg:pt-50">
+        <div className="relative flex items-center justify-center mb-12 sm:mb-16">
           {/* Retro Icons - Standalone Component */}
           <RetroIcons />
 
           <Player
             src={mac}
-            className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain -my-4 sm:-my-8 relative z-10"
+            className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain relative z-10"
             autoplay
             loop
             style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}

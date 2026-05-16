@@ -7,9 +7,8 @@ export const Layout = ({ children }) => {
 
       <div
         className="pointer-events-none absolute inset-0 flex items-center justify-center bg-[var(--bg-color)] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] transition-colors duration-500"></div>
-      <div className="top-0 left-0 right-0 z-50 flex justify-center px-4">
+      <div className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4">
         <Navbar />
-        
       </div>
       <main className="relative">{children}</main>
     </div>
