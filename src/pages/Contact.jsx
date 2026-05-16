@@ -109,10 +109,10 @@ const ContactCard = ({ id, icon: Icon, label, value, href, colSpan, bg, descript
 
       {/* Bottom content */}
       <div className="mt-2 sm:mt-8 space-y-0.5 sm:space-y-1">
-        <h3 className="font-bricolage text-xs sm:text-xl font-semibold leading-tight text-gray-900 dark:text-gray-900 md:text-2xl">
+        <h3 className="text-[9px] sm:text-[12px] font-medium tracking-widest uppercase text-gray-600 dark:text-gray-700">
           {label}
         </h3>
-        <p className="text-[9px] sm:text-[11px] font-medium uppercase tracking-widest text-gray-600 dark:text-gray-700">
+        <p className="font-bricolage text-xs sm:text-xl font-semibold leading-tight text-gray-900 dark:text-gray-900 md:text-2xl">
           {description}
         </p>
         <p className="font-bricolage text-[10px] text-gray-700 dark:text-gray-800 sm:text-sm truncate">
