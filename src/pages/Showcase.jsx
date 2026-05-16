@@ -16,7 +16,7 @@ const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
   return (
     
     <div 
-      className={`relative flex flex-col items-center group transition-transform duration-700 ease-in-out hover:scale-110 hover:z-50 shrink-0 mx-4 sm:mx-8 md:mx-12 origin-top ${rotation} hover:rotate-0`}
+      className={`relative flex flex-col items-center group transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-110 hover:z-50 shrink-0 mx-4 sm:mx-8 md:mx-12 origin-top ${rotation} hover:rotate-0`}
       onMouseEnter={onHoverStart}
       onMouseLeave={onHoverEnd}
       onTouchStart={onHoverStart}
@@ -40,7 +40,7 @@ const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
               loop 
               muted 
               playsInline 
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110"
               loading="lazy"
             />
           ) : (

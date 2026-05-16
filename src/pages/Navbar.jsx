@@ -84,9 +84,12 @@ export default function Navbar() {
         className="hidden sm:flex items-center gap-1 px-4 py-2.5 rounded-full relative z-20"
         style={GLASS_STYLE}
       >
-        <span className="px-4 py-2 text-sm font-semibold mr-2 text-black dark:text-white">
+        <button
+          onClick={() => handleScroll("hero")}
+          className="px-4 py-2 text-sm font-bold mr-2 rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
+        >
           {BRAND_NAME}
-        </span>
+        </button>
 
         {/* Divider */}
         <div className="w-px h-5 mr-2 rounded-full bg-black/10" />
@@ -113,9 +116,12 @@ export default function Navbar() {
           className="flex items-center justify-between gap-4 px-4 py-2 rounded-full"
           style={GLASS_STYLE}
         >
-          <span className="text-sm font-semibold text-black dark:text-white">
+          <button
+            onClick={() => handleScroll("hero")}
+            className="px-4 py-2 text-sm font-bold rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
+          >
             {BRAND_NAME}
-          </span>
+          </button>
 
           <div className="flex items-center gap-2">
             <button

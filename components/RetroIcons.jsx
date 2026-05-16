@@ -208,10 +208,11 @@ const RetroIcons = () => {
             <motion.div
               className="w-full h-full"
               animate={{ 
-                y: [0, -10, 0],
+                y: [0, -12, 0],
+                rotate: [0, 5, 0, -5, 0],
               }}
               transition={{
-                duration: 3,
+                duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
                 delay: 1.0 + index * 0.2,
