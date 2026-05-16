@@ -21,7 +21,7 @@ const NameStrip = () => (
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex flex-col items-center justify-start overflow-hidden scroll-mt-24">
+    <section id="hero" className="relative min-h-[758px] flex flex-col items-center justify-start overflow-hidden scroll-mt-24">
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-start min-h-full text-center px-6 sm:px-10 pt-48 sm:pt-50 lg:pt-50">
         <div className="relative flex items-center justify-center mb-6 sm:mb-8">
