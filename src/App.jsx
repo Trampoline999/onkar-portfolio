@@ -1,4 +1,4 @@
-// App.jsx — wrap everything in Layout
+
 import Layout from "./pages/Layout";
 import Hero from "./pages/Hero";
 import Education from "./pages/Education";
@@ -9,6 +9,7 @@ import Showcase from "./pages/Showcase";
 import Contact from "./pages/Contact";
 
 export default function App() {
+  
   return (
     <Layout>
       <Hero />
@@ -16,8 +17,8 @@ export default function App() {
       <TechnicalSkills />
       <Project />
       <Skill />     
-       <Showcase />
-       <Contact />
+      <Showcase />
+      <Contact />
     </Layout>
   );
 }
