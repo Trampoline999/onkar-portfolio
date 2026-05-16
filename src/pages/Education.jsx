@@ -55,7 +55,9 @@ const Education = () => {
             justify-around
             gap-4 
             p-4
-            md:p-12 lg:p-14"
+            md:p-12 lg:p-14
+            transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
+            hover:shadow-2xl hover:-translate-y-1"
         >
           <Card video={college} />
 
