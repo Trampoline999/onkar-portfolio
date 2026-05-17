@@ -24,10 +24,16 @@ import jsonIcon from "../assets/icons/JSON Icon Set.png";
 import jsonwebtokenIcon from "../assets/icons/JSON Web Token 48.png";
 import mongodbIcon from "../assets/icons/MongoDB Icons.png";
 
+// Importing the exact vector files from the assets/icons folder
+import Vector59 from "../assets/icons/Vector59.svg";
+import Vector19 from "../assets/icons/Vector19.svg";
+import Vector8 from "../assets/icons/Vector8.svg";
+import Vector43 from "../assets/icons/Vector43.svg";
+
 const IconStrip = ({ icons }) => {
   return (
     <div
-      className="mt-3 flex max-w-full flex-row flex-wrap gap-0.5 sm:gap-1 overflow-x-auto pb-1"
+      className="mt-3 flex max-w-full flex-row flex-wrap gap-1.5 sm:gap-2 overflow-x-auto pb-1"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
       <style>{`div::-webkit-scrollbar { display: none; }`}</style>
@@ -35,9 +41,10 @@ const IconStrip = ({ icons }) => {
       {icons.map(({ src, alt }) => (
         <div
           key={alt}
-          className="h-9 w-9 sm:h-11 sm:w-11 md:h-12 md:w-12 shrink-0 overflow-hidden"
+          className="h-7 w-7 sm:h-8 sm:w-8 md:h-8 md:w-8 lg:h-9 lg:w-9 shrink-0 overflow-hidden rounded-lg bg-white shadow-sm border border-zinc-200/50 p-1 sm:p-1.5 flex items-center justify-center"
+          title={alt}
         >
-          <img src={src} alt={alt} className="h-full w-full object-contain p-1.5" />
+          <img src={src} alt={alt} className="h-full w-full object-contain" />
         </div>
       ))}
     </div>
@@ -55,7 +62,8 @@ const TechnicalSkills = () => {
 
           <BentoGrid>
             <BentoCard
-              className="md:col-span-4 bg-fuchsia-200 dark:bg-fuchsia-300"             
+              className="md:col-span-3 lg:col-span-4 bg-pink-200 p-2.5 sm:p-3"             
+              innerClassName="bg-pink-400 rounded-xl md:rounded-[1.8rem] border-2 border-pink-200 overflow-hidden"
               title="Frameworks & Libraries"            
               description="React, Express, Tailwind, and Vite — building robust, scalable, and responsive applications."
               footer={<IconStrip icons={[
@@ -65,10 +73,18 @@ const TechnicalSkills = () => {
                 { src: expressIcon, alt: "Express JS" },
                 { src: nodeIcon, alt: "Node.js" }
               ]} />}
-            />
+            >
+              {/* Vector59.svg from assets/icons */}
+              <img
+                src={Vector59}
+                alt="Vector59"
+                className="absolute z-0 right-[-15px] bottom-[-10px] sm:right-[-30px] sm:bottom-[-20px] w-[140px] sm:w-[180px] md:w-[200px] lg:w-[280px] h-auto pointer-events-none opacity-15 select-none transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110 group-hover:-translate-x-3 group-hover:rotate-6"
+              />
+            </BentoCard>
 
             <BentoCard
-              className="md:col-span-2 bg-indigo-200 dark:bg-indigo-300"              
+              className="md:col-span-3 lg:col-span-2 bg-indigo-200 p-2.5 sm:p-3"              
+              innerClassName="bg-indigo-400 rounded-xl md:rounded-[1.8rem] border-2 border-indigo-200 overflow-hidden"
               title="Programming Languages"          
               description="JavaScript, TypeScript, HTML, and CSS for structuring and scripting dynamic web experiences."
               footer={<IconStrip icons={[
@@ -80,10 +96,18 @@ const TechnicalSkills = () => {
                 { src: htmlIcon, alt: "HTML" },
                 { src: cssIcon, alt: "CSS" },                
               ]} />}
-            />
+            >
+              {/* Vector19.svg from assets/icons */}
+              <img
+                src={Vector19}
+                alt="Vector19"
+                className="absolute z-0 right-[-5px] bottom-[-20px] sm:right-[-10px] sm:bottom-[-35px] w-[65px] sm:w-[80px] md:w-[85px] lg:w-[120px] h-auto pointer-events-none opacity-15 select-none transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-115 group-hover:-translate-y-3 group-hover:-rotate-6"
+              />
+            </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 bg-orange-200 dark:bg-orange-300"
+              className="md:col-span-3 bg-orange-200 p-2.5 sm:p-3"
+              innerClassName="bg-orange-400 rounded-xl md:rounded-[1.8rem] border-2 border-orange-200 overflow-hidden"
               title="Tools & Platforms"
               description="Docker, Git, GitHub, Figma, and Linux — modern tooling for streamlined development and collaboration."
               footer={<IconStrip icons={[
@@ -98,10 +122,18 @@ const TechnicalSkills = () => {
                 {src:jsonwebtokenIcon, alt: "JSON Web Token"},
                 { src: jsonIcon, alt: "JSON" }
               ]} />}
-            />
+            >
+              {/* Vector8.svg from assets/icons */}
+              <img
+                src={Vector8}
+                alt="Vector8"
+                className="absolute z-0 right-[-5px] bottom-[-10px] sm:right-[-10px] sm:bottom-[-15px] w-[100px] sm:w-[120px] md:w-[130px] lg:w-[170px] h-auto pointer-events-none opacity-15 select-none transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-110 group-hover:-translate-x-2 group-hover:rotate-6"
+              />
+            </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 bg-emerald-200 dark:bg-emerald-300"
+              className="md:col-span-3 bg-emerald-200 p-2.5 sm:p-3"
+              innerClassName="bg-emerald-400 rounded-xl md:rounded-[1.8rem] border-2 border-emerald-200 overflow-hidden"
               title="Database & ORM"
               description="MySQL, PostgreSQL, and MongoDB — managing data with efficient and reliable database systems."
               footer={<IconStrip icons={[
@@ -110,9 +142,15 @@ const TechnicalSkills = () => {
                 { src: mysqlIcon, alt: "MySQL" },
                 {src:mongodbIcon, alt: "MongoDB"}
                 
-                
               ]} />}
-            />
+            >
+              {/* Vector43.svg from assets/icons */}
+              <img
+                src={Vector43}
+                alt="Vector43"
+                className="absolute z-0 right-[-10px] bottom-[-10px] sm:right-[-20px] sm:bottom-[-20px] w-[80px] sm:w-[100px] md:w-[110px] lg:w-[145px] h-auto pointer-events-none opacity-15 select-none transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-115 group-hover:rotate-[-15deg]"
+              />
+            </BentoCard>
           </BentoGrid>
 
           <div id="skills" className="sr-only" />
