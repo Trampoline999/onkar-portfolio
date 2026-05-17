@@ -44,7 +44,7 @@ export const BentoCard = ({
           {title ? (
             <h3
               className={cn(
-                "font-bricolage text-xl font-semibold leading-tight sm:text-xl md:text-2xl lg:text-3xl text-[#32313b] dark:text-zinc-50",
+                "font-bricolage text-xl font-semibold leading-tight sm:text-xl md:text-2xl lg:text-3xl text-[#32313b] dark:text-zinc-800",
                 titleClassName,
               )}
             >

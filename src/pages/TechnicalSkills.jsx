@@ -55,7 +55,7 @@ const TechnicalSkills = () => {
 
           <BentoGrid>
             <BentoCard
-              className="md:col-span-4 bg-[#ffcce3] dark:bg-[#f49eba]"             
+              className="md:col-span-4 bg-pink-200 dark:bg-pink-300"             
               title="Frameworks & Libraries"            
               description="React, Express, Tailwind, and Vite — building robust, scalable, and responsive applications."
               footer={<IconStrip icons={[
@@ -68,7 +68,7 @@ const TechnicalSkills = () => {
             />
 
             <BentoCard
-              className="md:col-span-2 bg-[#d5cffd] dark:bg-[#d5cffd]"              
+              className="md:col-span-2 bg-indigo-200 dark:bg-indigo-300"              
               title="Programming Languages"          
               description="JavaScript, TypeScript, HTML, and CSS for structuring and scripting dynamic web experiences."
               footer={<IconStrip icons={[
@@ -83,7 +83,7 @@ const TechnicalSkills = () => {
             />
 
             <BentoCard
-              className="md:col-span-3 bg-[#ffd8ca] dark:bg-[#f69267]"
+              className="md:col-span-3 bg-orange-200 dark:bg-orange-300"
               title="Tools & Platforms"
               description="Docker, Git, GitHub, Figma, and Linux — modern tooling for streamlined development and collaboration."
               footer={<IconStrip icons={[
@@ -101,7 +101,7 @@ const TechnicalSkills = () => {
             />
 
             <BentoCard
-              className="md:col-span-3 bg-[#c1e9d8] dark:bg-[#45be8b]"
+              className="md:col-span-3 bg-emerald-200 dark:bg-emerald-300"
               title="Database & ORM"
               description="MySQL, PostgreSQL, and SQL — managing data with efficient and reliable database systems."
               footer={<IconStrip icons={[
