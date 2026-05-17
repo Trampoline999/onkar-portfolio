@@ -62,8 +62,7 @@ const TechnicalSkills = () => {
 
           <BentoGrid>
             <BentoCard
-              className="md:col-span-3 lg:col-span-4 bg-pink-200  p-2.5 sm:p-3"             
-              innerClassName="bg-pink-300 dark:bg-pink-400 rounded-xl md:rounded-[1.8rem] border-2 border-pink-200 overflow-hidden "
+              className="md:col-span-3 lg:col-span-4 bg-pink-300 dark:bg-pink-400"             
               title="Frameworks & Libraries"            
               description="React, Express, Tailwind, and Vite — building robust, scalable, and responsive applications."
               footer={<IconStrip icons={[
@@ -83,8 +82,7 @@ const TechnicalSkills = () => {
             </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 lg:col-span-2 bg-indigo-200 p-2.5 sm:p-3"              
-              innerClassName="bg-indigo-300 dark:bg-indigo-400 rounded-xl md:rounded-[1.8rem] border-2 border-indigo-200 overflow-hidden"
+              className="md:col-span-3 lg:col-span-2 bg-indigo-300 dark:bg-indigo-400"              
               title="Programming Languages"          
               description="JavaScript, TypeScript, HTML, and CSS for structuring and scripting dynamic web experiences."
               footer={<IconStrip icons={[
@@ -106,8 +104,7 @@ const TechnicalSkills = () => {
             </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 bg-orange-200 p-2.5 sm:p-3"
-              innerClassName="bg-orange-300 dark:bg-orange-400 rounded-xl md:rounded-[1.8rem] border-2 border-orange-200 overflow-hidden"
+              className="md:col-span-3 bg-orange-300 dark:bg-orange-400"
               title="Tools & Platforms"
               description="Docker, Git, GitHub, Figma, and Linux — modern tooling for streamlined development and collaboration."
               footer={<IconStrip icons={[
@@ -132,8 +129,7 @@ const TechnicalSkills = () => {
             </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 bg-emerald-200 p-2.5 sm:p-3"
-              innerClassName="bg-emerald-300 dark:bg-emerald-400 rounded-xl md:rounded-[1.8rem] border-2 border-emerald-200 overflow-hidden"
+              className="md:col-span-3 bg-emerald-300 dark:bg-emerald-400"
               title="Database & ORM"
               description="MySQL, PostgreSQL, and MongoDB — managing data with efficient and reliable database systems."
               footer={<IconStrip icons={[
