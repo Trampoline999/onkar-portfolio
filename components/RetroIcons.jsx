@@ -188,7 +188,7 @@ const RetroIcons = () => {
           <motion.div
             key={`icon-wrapper-${index}`}
             className="absolute w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 pointer-events-none z-[-1] left-1/2 top-1/2 text-black dark:text-white transition-colors duration-300"
-            initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
+            initial={{ scale: 0.3, x: "-50%", y: "-50%", opacity: 0 }}
             animate={{
               scale: 1,
               x: `calc(-50% + (${Math.cos(radian)} * ${radius}) - 10px)`,
@@ -196,9 +196,9 @@ const RetroIcons = () => {
               opacity: 1,
             }}
             transition={{
-              duration: 0.8,
+              duration: 1.4,
               ease: [0.16, 1, 0.3, 1],
-              delay: 0.2 + index * 0.05,
+              delay: 0.8 + index * 0.12,
             }}
             style={{
               willChange: "transform, opacity",
@@ -215,7 +215,7 @@ const RetroIcons = () => {
                 duration: 4,
                 repeat: Infinity,
                 ease: "easeInOut",
-                delay: 1.0 + index * 0.2,
+                delay: 2.2 + index * 0.12,
               }}
               style={{
                 filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.1))",             
