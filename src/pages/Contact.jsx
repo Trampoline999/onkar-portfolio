@@ -1,4 +1,9 @@
 import { Mail, FileText, ArrowUpRight } from "lucide-react";
+import mailImg from "../assets/images/mail.webp";
+import linkedinImg from "../assets/images/linkedIn.webp";
+import githubImg from "../assets/images/github.webp";
+import twitterImg from "../assets/images/twitter.webp";
+import resumeImg from "../assets/images/resume.webp";
 
 // FontAwesome Brands SVGs
 const FALinkedIn = ({ className }) => (
@@ -41,9 +46,12 @@ const contactItems = [
     label: "Email",
     value: "onkarchougule99@gmail.com",
     href: "https://mail.google.com/mail/?view=cm&to=onkarchougule99@gmail.com",
-    colSpan: "md:col-span-3",
+    colSpan: "col-span-2 md:col-span-3",
     bg: "bg-violet-200 dark:bg-violet-300",
     description: "Drop me a message anytime",
+    image: mailImg,
+    translateClass: "translate-y-[44%] translate-x-[10%]",
+    hoverTranslateClass: "group-hover:translate-y-[36%]",
   },
   {
     id: "linkedin",
@@ -51,9 +59,10 @@ const contactItems = [
     label: "LinkedIn",
     value: "linkedin.com/in/onkar-chougule01",
     href: "https://www.linkedin.com/in/onkar-chougule01",
-    colSpan: "md:col-span-3",
+    colSpan: "col-span-2 md:col-span-3",
     bg: "bg-sky-200 dark:bg-sky-300",
     description: "Let's connect professionally",
+    image: linkedinImg,
   },
   {
     id: "github",
@@ -61,9 +70,10 @@ const contactItems = [
     label: "GitHub",
     value: "github.com/Trampoline999",
     href: "https://github.com/Trampoline999",
-    colSpan: "md:col-span-2",
+    colSpan: "col-span-2 md:col-span-3 lg:col-span-2",
     bg: "bg-zinc-200 dark:bg-zinc-300",
     description: "Check out my open source work",
+    image: githubImg,
   },
   {
     id: "twitter",
@@ -71,9 +81,12 @@ const contactItems = [
     label: "Twitter / X",
     value: "@onkarchougule99",
     href: "https://twitter.com/onkarchougule99",
-    colSpan: "md:col-span-2",
+    colSpan: "col-span-2 md:col-span-3 lg:col-span-2",
     bg: "bg-emerald-200 dark:bg-emerald-300",
     description: "Thoughts & updates",
+    image: twitterImg,
+    translateClass: "translate-y-[46%] translate-x-[10%]",
+    hoverTranslateClass: "group-hover:translate-y-[38%]",
   },
   {
     id: "resume",
@@ -81,44 +94,73 @@ const contactItems = [
     label: "Resume",
     value: "View My Resume",
     href: "https://drive.google.com/file/d/11scqOdmXEz2XDUm3K97kb0Us0bELQkL5/view?usp=sharing",
-    colSpan: "md:col-span-2",
+    colSpan: "col-span-2 md:col-span-6 lg:col-span-2",
     bg: "bg-amber-200 dark:bg-amber-300",
     description: "Download or view online",
+    image: resumeImg,
   },
 ];
 
-const ContactCard = ({ id, icon: Icon, label, value, href, colSpan, bg, description }) => {
+const ContactCard = ({ id, icon: Icon, label, value, href, colSpan, bg, description, image, translateClass, hoverTranslateClass }) => {
   return (
     <a
       id={`contact-${id}`}
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl p-3 sm:p-6 md:rounded-4xl md:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${bg} ${colSpan}`}
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-2xl p-4 sm:p-6 md:rounded-4xl md:p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${bg} ${colSpan}`}
     >
-      {/* Top row */}
-      <div className="flex items-start justify-between">
-        <div className="flex h-7 w-7 sm:h-12 sm:w-12 items-center justify-center rounded-lg sm:rounded-2xl bg-black/10 dark:bg-black/15 backdrop-blur-sm">
-          <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-gray-900 dark:text-gray-900" strokeWidth={1.8} />
+      {/* Left side text */}
+      <div className={`flex flex-col justify-between h-full flex-1 min-w-0 z-10 ${
+        image 
+          ? "pr-[110px] min-[375px]:pr-[125px] min-[425px]:pr-[140px] sm:pr-[155px] md:pr-[185px] lg:pr-[210px]" 
+          : "pr-2"
+      }`}>
+        {/* Top row */}
+        <div className="flex items-start justify-between sm:justify-start">
+          <div className="flex h-7 w-7 sm:h-12 sm:w-12 items-center justify-center rounded-lg sm:rounded-2xl bg-black/10 dark:bg-black/15 backdrop-blur-sm">
+            <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-gray-900 dark:text-gray-900" strokeWidth={1.8} />
+          </div>
+          <ArrowUpRight
+            className="h-5 w-5 text-gray-700 dark:text-gray-800 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:hidden"
+            strokeWidth={2}
+          />
         </div>
-        <ArrowUpRight
-          className="h-5 w-5 text-gray-700 dark:text-gray-800 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-          strokeWidth={2}
-        />
+
+        {/* Bottom content */}
+        <div className="mt-3 sm:mt-8 space-y-0.5 sm:space-y-1">
+          <h3 className="text-[9px] sm:text-[12px] font-medium tracking-widest uppercase text-gray-600 dark:text-gray-700">
+            {label}
+          </h3>
+          <p className="font-bricolage text-xs sm:text-base md:text-lg lg:text-xl font-semibold leading-tight text-gray-900 dark:text-gray-900">
+            {description}
+          </p>
+          <p className="font-bricolage text-[10px] text-gray-700 dark:text-gray-800 sm:text-sm truncate">
+            {value}
+          </p>
+        </div>
       </div>
 
-      {/* Bottom content */}
-      <div className="mt-2 sm:mt-8 space-y-0.5 sm:space-y-1">
-        <h3 className="text-[9px] sm:text-[12px] font-medium tracking-widest uppercase text-gray-600 dark:text-gray-700">
-          {label}
-        </h3>
-        <p className="font-bricolage text-xs sm:text-xl font-semibold leading-tight text-gray-900 dark:text-gray-900 md:text-2xl">
-          {description}
-        </p>
-        <p className="font-bricolage text-[10px] text-gray-700 dark:text-gray-800 sm:text-sm truncate">
-          {value}
-        </p>
-      </div>
+      {/* Absolute Bottom-Right Image Illustration (Responsive, Corner-aligned, and Bottom-clipped) */}
+      {image ? (
+        <div className={`absolute right-0 bottom-0 w-[130px] min-[375px]:w-[150px] min-[425px]:w-[170px] sm:w-[185px] md:w-[225px] lg:w-[260px] shrink-0 overflow-hidden pointer-events-none transition-transform duration-500 group-hover:scale-105 flex items-end justify-end ${
+          translateClass || "translate-y-[25%] translate-x-[10%]"
+        } ${
+          hoverTranslateClass || "group-hover:translate-y-[20%]"
+        }`}>
+          <img
+            src={image}
+            alt={label}
+            className="w-full h-auto object-contain object-bottom-right"
+          />
+        </div>
+      ) : null}
+
+      {/* Arrow on desktop placed absolute top-right */}
+      <ArrowUpRight
+        className="absolute right-4 top-4 h-5 w-5 text-gray-700 dark:text-gray-800 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 hidden sm:block"
+        strokeWidth={2}
+      />
     </a>
   );
 };
