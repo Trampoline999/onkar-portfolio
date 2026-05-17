@@ -23,8 +23,8 @@ const Hero = () => {
   return (
     <section id="hero" className="relative min-h-[758px] flex flex-col items-center justify-start overflow-hidden scroll-mt-24">
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col items-center justify-start min-h-full text-center px-6 sm:px-10 pt-48 sm:pt-50 lg:pt-50">
-        <div className="relative flex items-center justify-center mb-6 sm:mb-8">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-48 sm:pt-50 lg:pt-50">
+        <div className="relative flex items-center justify-center">
           {/* Retro Icons - Standalone Component */}
           <RetroIcons />
 
@@ -39,7 +39,7 @@ const Hero = () => {
 
         {/* Available badge */}
         <div
-          className="inline-flex items-center justify-center gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2 py-1 sm:px-3 sm:py-2 rounded-full"
+          className="inline-flex items-center justify-start gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2 py-1 sm:px-3 sm:py-2 rounded-full"
           style={{
             background: "rgba(255,255,255,0.15)",
             backdropFilter: "blur(8px)",

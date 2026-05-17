@@ -103,7 +103,7 @@ const TechnicalSkills = () => {
             <BentoCard
               className="md:col-span-3 bg-green-200 dark:bg-green-300"
               title="Database & ORM"
-              description="MySQL, PostgreSQL, and SQL — managing data with efficient and reliable database systems."
+              description="MySQL, PostgreSQL, and MongoDB — managing data with efficient and reliable database systems."
               footer={<IconStrip icons={[
                 
                 { src: postgresqlIcon, alt: "PostgreSQL" },
