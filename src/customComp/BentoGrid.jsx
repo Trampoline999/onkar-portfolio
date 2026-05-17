@@ -55,7 +55,7 @@ export const BentoCard = ({
             </h3>
           ) : null}
           {description ? (
-            <p className="font-sans max-w-[52ch] text-gray-600 dark:text-gray-100 text-xs leading-normal sm:text-sm lg:text-base">
+            <p className="font-bricolage max-w-[52ch] text-gray-800 dark:text-gray-100 text-xs leading-normal sm:text-sm lg:text-base">
               {description}
             </p>
           ) : null}

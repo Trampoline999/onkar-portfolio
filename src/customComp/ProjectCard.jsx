@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
 const GitHubIcon = () => (
@@ -20,6 +20,32 @@ const ProfileCard = ({
   githubLink = "#",
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
+  const descRef = useRef(null);
+  const techRef = useRef(null);
+  const [descHeight, setDescHeight] = useState(0);
+  const [techHeight, setTechHeight] = useState(0);
+
+  useEffect(() => {
+    if (!descRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setDescHeight(entry.target.scrollHeight);
+      }
+    });
+    observer.observe(descRef.current);
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!techRef.current) return;
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setTechHeight(entry.target.scrollHeight);
+      }
+    });
+    observer.observe(techRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <div className="group w-full bg-[#f0f0f0] border-1 border-[#f0f0f0] dark:bg-zinc-800 dark:border-zinc-600 rounded-[28px] p-2.5 flex flex-col gap-3 shadow-sm transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:rotate-[-1.5deg] hover:-translate-y-2 hover:shadow-xl cursor-pointer">
@@ -54,38 +80,78 @@ const ProfileCard = ({
         <div className="flex flex-col gap-2">
 
           {/* Name + Chevron toggle row */}
-          <div className="flex items-center justify-between">
-            <h2 className="font-bricolage text-[17px] sm:text-[19px] font-bold text-gray-900 dark:text-gray-100 leading-tight">
+          <div
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex items-center justify-between cursor-pointer select-none group/title"
+          >
+            <h2 className="font-bricolage text-[17px] sm:text-[19px] font-bold text-gray-900 dark:text-gray-100 leading-tight transition-colors duration-300 group-hover/title:text-black dark:group-hover/title:text-white">
               {name}
             </h2>
             <button
-              onClick={() => setIsExpanded(!isExpanded)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsExpanded(!isExpanded);
+              }}
               aria-label={isExpanded ? "Collapse description" : "Expand description"}
-              className="flex-shrink-0 ml-2 flex items-center justify-center h-7 w-7 rounded-full bg-gray-200 dark:bg-zinc-700 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-colors duration-200"
+              className="flex-shrink-0 ml-2 flex items-center justify-center h-7 w-7 rounded-full bg-gray-200 dark:bg-zinc-700 hover:bg-gray-300 dark:hover:bg-zinc-600 transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm hover:shadow-md"
             >
               <ChevronDown
-                className={`h-4 w-4 text-gray-600 dark:text-gray-300 transition-transform duration-300 ${isExpanded ? "rotate-180" : "rotate-0"}`}
+                className={`h-4 w-4 text-gray-600 dark:text-gray-300 transition-transform duration-500 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                  isExpanded ? "rotate-180" : "rotate-0"
+                }`}
                 strokeWidth={2.5}
               />
             </button>
           </div>
 
           {/* Description */}
-          <p className={`text-[12px] sm:text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed transition-all duration-300 ${isExpanded ? "" : "line-clamp-3"}`}>
-            {description}
-          </p>
+          <div className="relative">
+            <div
+              style={{
+                maxHeight: isExpanded ? `${descHeight}px` : "4.5rem",
+              }}
+              className="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
+            >
+              <p
+                ref={descRef}
+                className="text-[12px] sm:text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed"
+              >
+                {description}
+              </p>
+            </div>
+            {/* Fade overlay when collapsed and text is long */}
+            {descHeight > 72 && (
+              <div
+                className={`absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-[#f0f0f0] dark:from-zinc-800 to-transparent pointer-events-none transition-opacity duration-500 ease-in-out ${
+                  isExpanded ? "opacity-0" : "opacity-100"
+                }`}
+              />
+            )}
+          </div>
 
           {/* Tech stack tags */}
           {techstack ? (
-            <div className={`flex flex-wrap gap-1.5 sm:gap-2 mt-1 transition-all duration-300 ${isExpanded ? "" : "max-h-[20px] sm:max-h-[28px] overflow-hidden"}`}>
-              {techstack.split(",").map((tech, index) => (
-                <span
-                  key={index}
-                  className="inline-flex items-center rounded-full bg-gray-200/80 dark:bg-zinc-700 border border-gray-300/50 dark:border-zinc-600 text-gray-600 dark:text-gray-300 px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-[11px] font-medium tracking-wide whitespace-nowrap"
+            <div className="relative mt-1">
+              <div
+                style={{
+                  maxHeight: isExpanded ? `${techHeight}px` : "1.75rem",
+                }}
+                className="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
+              >
+                <div
+                  ref={techRef}
+                  className="flex flex-wrap gap-1.5 sm:gap-2"
                 >
-                  {tech.trim()}
-                </span>
-              ))}
+                  {techstack.split(",").map((tech, index) => (
+                    <span
+                      key={index}
+                      className="inline-flex items-center rounded-full bg-gray-200/80 dark:bg-zinc-700 border border-gray-300/50 dark:border-zinc-600 text-gray-600 dark:text-gray-300 px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-[11px] font-medium tracking-wide whitespace-nowrap"
+                    >
+                      {tech.trim()}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ) : null}
         </div>
