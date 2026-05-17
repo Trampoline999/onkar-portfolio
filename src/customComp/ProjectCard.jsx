@@ -48,7 +48,7 @@ const ProfileCard = ({
   }, []);
 
   return (
-    <div className="group w-full bg-[#f0f0f0] border-1 border-[#f0f0f0] dark:bg-zinc-800 dark:border-zinc-600 rounded-[28px] p-2.5 flex flex-col gap-3 shadow-sm transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:rotate-[-1.5deg] hover:-translate-y-2 hover:shadow-xl cursor-pointer">
+    <div className="group w-full bg-[#f0f0f0] border-1 border-[#f0f0f0] dark:bg-zinc-800 dark:border-zinc-600 rounded-[28px] p-2.5 flex flex-col gap-3 shadow-sm transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-2 hover:shadow-xl cursor-pointer">
       {/* Image / Video */}
       <div
         className="relative w-full rounded-[20px] overflow-hidden shrink-0"
@@ -108,9 +108,11 @@ const ProfileCard = ({
           <div className="relative">
             <div
               style={{
-                maxHeight: isExpanded ? `${descHeight}px` : "4.5rem",
+                maxHeight: isExpanded ? `${descHeight}px` : undefined,
               }}
-              className="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
+              className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${
+                isExpanded ? "" : "max-h-[4.5rem] sm:max-h-[5.25rem]"
+              }`}
             >
               <p
                 ref={descRef}
@@ -120,7 +122,7 @@ const ProfileCard = ({
               </p>
             </div>
             {/* Fade overlay when collapsed and text is long */}
-            {descHeight > 72 && (
+            {descHeight > 84 && (
               <div
                 className={`absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-[#f0f0f0] dark:from-zinc-800 to-transparent pointer-events-none transition-opacity duration-500 ease-in-out ${
                   isExpanded ? "opacity-0" : "opacity-100"
@@ -134,9 +136,11 @@ const ProfileCard = ({
             <div className="relative mt-1">
               <div
                 style={{
-                  maxHeight: isExpanded ? `${techHeight}px` : "1.75rem",
+                  maxHeight: isExpanded ? `${techHeight}px` : undefined,
                 }}
-                className="overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${
+                  isExpanded ? "" : "max-h-[20px] sm:max-h-[28px]"
+                }`}
               >
                 <div
                   ref={techRef}

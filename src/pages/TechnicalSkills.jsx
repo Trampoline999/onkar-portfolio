@@ -62,7 +62,7 @@ const TechnicalSkills = () => {
 
           <BentoGrid>
             <BentoCard
-              className="md:col-span-3 lg:col-span-4 bg-pink-300 dark:bg-pink-400 "             
+              className="md:col-span-3 lg:col-span-4 bg-pink-300 dark:bg-pink-400 hover:rotate-[-1deg] md:hover:rotate-[-1.5deg]"             
               title="Frameworks & Libraries"            
               description="React, Express, Tailwind, and Vite — building robust, scalable, and responsive applications."
               footer={<IconStrip icons={[
@@ -82,7 +82,7 @@ const TechnicalSkills = () => {
             </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 lg:col-span-2 bg-indigo-300 dark:bg-indigo-400"              
+              className="md:col-span-3 lg:col-span-2 bg-indigo-300 dark:bg-indigo-400 hover:rotate-[1deg] md:hover:rotate-[1.5deg]"              
               title="Programming Languages"          
               description="JavaScript, TypeScript, HTML, and CSS for structuring and scripting dynamic web experiences."
               footer={<IconStrip icons={[
@@ -104,7 +104,7 @@ const TechnicalSkills = () => {
             </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 bg-orange-300 dark:bg-orange-400"
+              className="md:col-span-3 bg-orange-300 dark:bg-orange-400 hover:rotate-[1deg] md:hover:rotate-[1.5deg]"
               title="Tools & Platforms"
               description="Docker, Git, GitHub, Figma, and Linux — modern tooling for streamlined development and collaboration."
               footer={<IconStrip icons={[
@@ -129,7 +129,7 @@ const TechnicalSkills = () => {
             </BentoCard>
 
             <BentoCard
-              className="md:col-span-3 bg-emerald-300 dark:bg-emerald-400"
+              className="md:col-span-3 bg-emerald-300 dark:bg-emerald-400 hover:rotate-[-1deg] md:hover:rotate-[-1.5deg]"
               title="Database & ORM"
               description="MySQL, PostgreSQL, and MongoDB — managing data with efficient and reliable database systems."
               footer={<IconStrip icons={[
