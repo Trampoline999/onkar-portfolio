@@ -57,7 +57,7 @@ const Education = () => {
             p-4
             md:p-12 lg:p-14
             transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
-            hover:shadow-2xl hover:-translate-y-1"
+            hover:shadow-2xl"
         >
           <Card video={college} />
 

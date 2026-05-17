@@ -55,7 +55,7 @@ const TechnicalSkills = () => {
 
           <BentoGrid>
             <BentoCard
-              className="md:col-span-4 bg-pink-200 dark:bg-pink-300"             
+              className="md:col-span-4 bg-fuchsia-200 dark:bg-fuchsia-300"             
               title="Frameworks & Libraries"            
               description="React, Express, Tailwind, and Vite — building robust, scalable, and responsive applications."
               footer={<IconStrip icons={[
@@ -101,7 +101,7 @@ const TechnicalSkills = () => {
             />
 
             <BentoCard
-              className="md:col-span-3 bg-emerald-200 dark:bg-emerald-300"
+              className="md:col-span-3 bg-green-200 dark:bg-green-300"
               title="Database & ORM"
               description="MySQL, PostgreSQL, and SQL — managing data with efficient and reliable database systems."
               footer={<IconStrip icons={[
