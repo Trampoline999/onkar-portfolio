@@ -62,6 +62,7 @@ const ProfileCard = ({
             loop
             muted
             playsInline
+            defaultMuted
             className="w-full h-full object-cover"
           />
         ) : (

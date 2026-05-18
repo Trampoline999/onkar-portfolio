@@ -10,7 +10,7 @@ const Card = ({ video }) => {
         muted
         loop
         playsInline
-        loading="eager"
+        defaultMuted
       />
     </div>
   );

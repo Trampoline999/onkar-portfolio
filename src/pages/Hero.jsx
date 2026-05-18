@@ -167,7 +167,7 @@ const Hero = () => {
 
           <Player
             src={getLottieData(currentColor)}
-            className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain relative z-10"
+            className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain relative z-10 pointer-events-none mac-lottie-player"
             autoplay
             loop
             style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
