@@ -44,9 +44,9 @@ const Education = () => {
             bg-neutral-100 dark:bg-neutral-800
             border-2
             rounded-4xl
-            border-gray-200
+            border-gray-50
             shadow-lg dark:shadow-lg
-            dark:border-zinc-700
+            dark:border-neutral-700
             w-full mx-auto max-w-7xl
             min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] h-auto
             flex flex-col lg:flex-row
