@@ -44,7 +44,7 @@ const Hero = () => {
             font-bricolage font-black uppercase tracking-widest
             text-[6px] sm:text-[8px]
             px-2.5 py-1 sm:px-3.5 sm:py-1.5
-            rounded-[2px] sm:rounded-[6px]
+            rounded-[4px] sm:rounded-[8px]
             border-[0.75px] sm:border-[1px] border-[#acc79a]
             shadow-[0_2px_0_0_#acc79a]
             hover:translate-y-[-0.5px] hover:shadow-[0_2.5px_0_0_#acc79a]
