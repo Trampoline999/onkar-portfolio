@@ -41,7 +41,7 @@ const Education = () => {
       <div className="w-full px-4 sm:px-6 md:px-10 lg:px-12">
         <div
           className="
-            bg-zinc-50 dark:bg-zinc-900
+            bg-zinc-100 dark:bg-zinc-800
             border border-zinc-200/60 dark:border-zinc-800/80
             rounded-[32px] sm:rounded-[40px]
             shadow-[0_15px_45px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_25px_60px_-25px_rgba(0,0,0,0.5)]
@@ -53,7 +53,7 @@ const Education = () => {
             mb-8 sm:mb-16 md:mb-24
             transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
             hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]
-            hover:scale-[1.01]"
+"
         >
           <Card video={college} />
 
@@ -63,20 +63,19 @@ const Education = () => {
             {/* Institution Badge & Date */}
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-blue-100/80 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200/50 dark:border-blue-850/50 select-none">
-                Bachelor of Engineering
+                Bachelor of Technology
               </span>
               <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-amber-100/80 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-200/50 dark:border-amber-850/50 select-none">
                 2019 - 2024
               </span>
             </div>
 
-            <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage tracking-tight leading-tight">
+            <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage tracking-normal leading-tight">
               D.Y Patil College of <br className="hidden sm:inline" />
               Engineering and Technology
             </h2>
 
-            {/* Premium Divider */}
-            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" />
+        
 
             <p className="font-sans text-sm sm:text-base md:text-[17px] leading-relaxed text-gray-600 dark:text-gray-300">
               A four-year <Highlighter action="highlight" color={c.blue}>
