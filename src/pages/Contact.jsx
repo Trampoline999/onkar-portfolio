@@ -117,14 +117,10 @@ const ContactCard = ({ id, icon: Icon, label, value, href, colSpan, bg, descript
           : "pr-2"
       }`}>
         {/* Top row */}
-        <div className="flex items-start justify-between sm:justify-start">
+        <div className="flex items-start">
           <div className="flex h-7 w-7 sm:h-12 sm:w-12 items-center justify-center rounded-lg sm:rounded-2xl bg-black/10 dark:bg-black/15 backdrop-blur-sm">
             <Icon className="h-3.5 w-3.5 sm:h-6 sm:w-6 text-gray-900 dark:text-gray-900" strokeWidth={1.8} />
           </div>
-          <ArrowUpRight
-            className="h-5 w-5 text-gray-700 dark:text-gray-800 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 sm:hidden"
-            strokeWidth={2}
-          />
         </div>
 
         {/* Bottom content */}
@@ -156,14 +152,16 @@ const ContactCard = ({ id, icon: Icon, label, value, href, colSpan, bg, descript
         </div>
       ) : null}
 
-      {/* Arrow on desktop placed absolute top-right */}
+      {/* Arrow placed absolute top-right for all screen sizes */}
       <ArrowUpRight
-        className="absolute right-4 top-4 h-5 w-5 text-gray-700 dark:text-gray-800 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 hidden sm:block"
+        className="absolute right-3 top-3 sm:right-4 sm:top-4 h-5 w-5 text-gray-700 dark:text-gray-800 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
         strokeWidth={2}
       />
     </a>
   );
 };
+
+import contactSticker from "../assets/images/contact.svg";
 
 const Contact = () => {
   return (
@@ -174,8 +172,17 @@ const Contact = () => {
       <div className="w-full px-4 sm:px-6 md:px-10">
         <div className="mx-auto w-full max-w-7xl">
           {/* Heading */}
-          <h2 className="text-black dark:text-gray-100 mb-16 text-center font-instrument text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl lg:text-7xl underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200">
-            Get in Touch
+          <h2 className="text-black dark:text-gray-100 mb-16 text-center font-instrument text-4xl font-bold tracking-wide sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="relative inline-flex items-center justify-center gap-3 sm:gap-5">
+              <span className="underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200">
+                Get in Touch
+              </span>
+              <img 
+                src={contactSticker} 
+                alt="contact sticker" 
+                className="w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 lg:w-14 lg:h-14 bg-white border-[2.5px] border-white rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.15)] object-contain pointer-events-none select-none transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-120 hover:rotate-[25deg] rotate-[15deg] shrink-0"
+              />
+            </span>
           </h2>
 
           {/* Bento grid */}

@@ -51,13 +51,24 @@ const IconStrip = ({ icons }) => {
   );
 };
 
+import skillsSticker from "../assets/images/technical-skills.svg";
+
 const TechnicalSkills = () => {
   return (
     <section id="skills" className="flex w-full flex-col items-center my-20 lg:my-30">
       <div className="w-full px-4 sm:px-6 md:px-10">
         <div className="mx-auto w-full max-w-7xl">
-          <h2 className="text-black dark:text-gray-100 mb-16 text-center font-instrument-spaced text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl lg:text-7xl underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200">
-            Technical Skills
+          <h2 className="text-black dark:text-gray-100 mb-16 text-center font-instrument-spaced text-4xl font-bold tracking-wider sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="relative inline-flex items-center justify-center gap-3 sm:gap-5">
+              <span className="underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200">
+                Technical Skills
+              </span>
+              <img 
+                src={skillsSticker} 
+                alt="skills sticker" 
+                className="w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 lg:w-14 lg:h-14 bg-white border-[2.5px] border-white rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.15)] object-contain pointer-events-none select-none transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-120 hover:rotate-[25deg] rotate-[15deg] shrink-0"
+              />
+            </span>
           </h2>
 
           <BentoGrid>
