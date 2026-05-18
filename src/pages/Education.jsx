@@ -32,42 +32,53 @@ const Education = () => {
   };
 
   return (
-    <div id="education" className="flex flex-col items-center mt-25  md:mt-30 lg:mt-16">
+    <div id="education" className="flex flex-col items-center mt-25 md:mt-30 lg:mt-16 w-full">
       <h1 className="text-black dark:text-white text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200 py-6 sm:py-10 md:py-14 mb-6 sm:mb-10 md:mb-16">
         Education
       </h1>
 
       {/* Big Card */}
-      <div className="w-full px-4 sm:px-6 md:px-10">
+      <div className="w-full px-4 sm:px-6 md:px-10 lg:px-12">
         <div
           className="
-            bg-gray-200 dark:bg-neutral-800
-            border-1
-            rounded-4xl
-            border-gray-100
-            shadow-lg dark:shadow-lg
-            dark:border-neutral-700
-            w-full mx-auto max-w-7xl
-            min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] h-auto
+            bg-zinc-50 dark:bg-zinc-900
+            border border-zinc-200/60 dark:border-zinc-800/80
+            rounded-[32px] sm:rounded-[40px]
+            shadow-[0_15px_45px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_25px_60px_-25px_rgba(0,0,0,0.5)]
+            w-full mx-auto max-w-6xl
             flex flex-col lg:flex-row
-            mb-8 sm:mb-16 md:mb-24
             items-center
-            justify-around
-            gap-4 
-            p-4
-            md:p-12 lg:p-14
+            gap-8 sm:gap-12 lg:gap-16
+            p-6 sm:p-10 md:p-12 lg:p-16
+            mb-8 sm:mb-16 md:mb-24
             transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
-            hover:shadow-2xl"
+            hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]
+            hover:scale-[1.01]"
         >
           <Card video={college} />
 
           {/* Text */}
-          <div className="flex flex-col text-left gap-3 max-w-2xl sm:items-center md:items-center md:text-center  lg:items-start lg:text-left">
-            <h1 className="text-gray-900 dark:text-gray-100 text-lg sm:text-xl md:text-2xl lg:text-4xl font-semibold font-bricolage">
-              D.Y Patil College of <br />
+          <div className="flex flex-col text-left gap-4 sm:gap-5 max-w-2xl lg:items-start lg:text-left flex-1">
+            
+            {/* Institution Badge & Date */}
+            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+              <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-blue-100/80 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200/50 dark:border-blue-850/50 select-none">
+                Bachelor of Engineering
+              </span>
+              <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-amber-100/80 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-200/50 dark:border-amber-850/50 select-none">
+                2019 - 2024
+              </span>
+            </div>
+
+            <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage tracking-tight leading-tight">
+              D.Y Patil College of <br className="hidden sm:inline" />
               Engineering and Technology
-            </h1>
-            <p className="font-sans pb-2 text-xs sm:text-sm md:text-l lg:text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+            </h2>
+
+            {/* Premium Divider */}
+            <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full" />
+
+            <p className="font-sans text-sm sm:text-base md:text-[17px] leading-relaxed text-gray-600 dark:text-gray-300">
               A four-year <Highlighter action="highlight" color={c.blue}>
                 Computer Science &amp; Engineering
               </Highlighter>{" "}journey at D.Y. Patil College of Engineering &amp; Technology, Kolhapur, completed between{" "}
