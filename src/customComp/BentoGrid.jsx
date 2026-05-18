@@ -29,7 +29,7 @@ export const BentoCard = ({
   return (
     <div
       className={cn(
-        "relative flex flex-col overflow-hidden rounded-2xl md:rounded-4xl text-card-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group",
+        "relative flex flex-col overflow-hidden rounded-2xl md:rounded-2xl text-card-foreground transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group",
         className,
       )}
     >

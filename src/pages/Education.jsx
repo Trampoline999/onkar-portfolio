@@ -41,12 +41,12 @@ const Education = () => {
       <div className="w-full px-4 sm:px-6 md:px-10">
         <div
           className="
-            bg-[#f0f0f0] dark:bg-zinc-800
+            bg-[#eaeaea] dark:bg-zinc-800
             border-1
-            rounded-[28px]
+            rounded-4xl
             border-gray-100
             shadow-lg dark:shadow-lg
-            dark:border-zinc-600
+            dark:border-zinc-700
             w-full mx-auto max-w-7xl
             min-h-[320px] sm:min-h-[420px] md:min-h-[520px] lg:min-h-[600px] h-auto
             flex flex-col lg:flex-row
