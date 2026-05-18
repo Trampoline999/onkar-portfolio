@@ -61,14 +61,14 @@ const Education = () => {
           <div className="flex flex-col text-left gap-4 sm:gap-5 max-w-2xl lg:items-start lg:text-left flex-1">
             
             {/* Institution Badge & Date */}
-            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
+            {/* <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
               <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-blue-100/80 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200/50 dark:border-blue-850/50 select-none">
                 Bachelor of Technology
               </span>
               <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-amber-100/80 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-200/50 dark:border-amber-850/50 select-none">
                 2019 - 2024
               </span>
-            </div>
+            </div> */}
 
             <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage leading-tight">
               D.Y Patil College of <br className="hidden sm:inline" />
@@ -84,6 +84,30 @@ const Education = () => {
               <Highlighter action="underline" color={c.orange}>2019-2024</Highlighter>{" "}graduating with a{" "}
               <Highlighter action="highlight" color={c.green}>CGPA of 7.76</Highlighter> and a passion for building real-world applications.
             </p>
+
+            <a
+              href="https://coek.dypgroup.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-block
+                w-[85px] text-center
+                bg-[#b3e3f9] text-[#155274]
+                font-monolisa font-black uppercase
+                text-[10px] sm:text-xs
+                py-1.5 sm:py-2
+                rounded-lg
+                border-[1px] sm:border-[1.5px] border-[#1a4469]
+                shadow-[0_2.5px_0_0_#1a4469] sm:shadow-[0_4px_0_0_#1a4469]
+                hover:translate-y-[1px] sm:hover:translate-y-[1.5px] hover:shadow-[0_1.5px_0_0_#1a4469] sm:hover:shadow-[0_2.5px_0_0_#1a4469]
+                active:translate-y-[2.5px] sm:active:translate-y-[4px] active:shadow-none
+                transition-all duration-100 ease-out
+                select-none`
+                mt-2.5 sm:mt-3
+              "
+            >
+                College
+            </a>
           </div>
         </div>
       </div>
