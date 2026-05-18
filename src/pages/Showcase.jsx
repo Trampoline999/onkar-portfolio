@@ -56,25 +56,14 @@ const HangingCard = ({ src, index, onHoverStart, onHoverEnd }) => {
   );
 };
 
-import showcaseSticker from "../assets/images/showcase.svg";
-
 const Showcase = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
     <section id="showcase" className="relative w-full py-10 sm:py-32 overflow-hidden flex flex-col justify-center items-center">
       
-      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl text-center mb-16 sm:mb-16 lg:mb-16">
-        <span className="relative inline-flex items-center justify-center gap-3 sm:gap-5">
-          <span className="underline decoration-wavy underline-offset-10 decoration-gray-900 dark:decoration-gray-200">
-            Showcase
-          </span>
-          <img 
-            src={showcaseSticker} 
-            alt="showcase sticker" 
-            className="w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 lg:w-14 lg:h-14 bg-white border-[2.5px] border-white rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.15)] object-contain pointer-events-none select-none transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-120 hover:rotate-[25deg] rotate-[15deg] shrink-0"
-          />
-        </span>
+      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl underline decoration-wavy underline-offset-10 decoration-gray-900 dark:decoration-gray-200 text-center mb-16 sm:mb-16 lg:mb-16">
+        Showcase
       </h1>
 
       {/* Main Container */}

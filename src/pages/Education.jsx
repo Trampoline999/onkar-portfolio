@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Card from "../customComp/Card";
 import college from "../assets/images/dypani.webm";
 import { Highlighter } from "../../components/ui/highlighter";
-import educationSticker from "../assets/images/education.svg";
 
 /** Watches the `dark` class on <html> and re-renders on change */
 function useDarkMode() {
@@ -34,17 +33,8 @@ const Education = () => {
 
   return (
     <div id="education" className="flex flex-col items-center mt-25  md:mt-30 lg:mt-16">
-      <h1 className="text-black dark:text-white text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument py-6 sm:py-10 md:py-14 mb-6 sm:mb-10 md:mb-16">
-        <span className="relative inline-flex items-center justify-center gap-3 sm:gap-5">
-          <span className="underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200">
-            Education
-          </span>
-          <img 
-            src={educationSticker} 
-            alt="education sticker" 
-            className="w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 lg:w-14 lg:h-14 bg-white border-[2.5px] border-white rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.15)] object-contain pointer-events-none select-none transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-120 hover:rotate-[25deg] rotate-[15deg] shrink-0"
-          />
-        </span>
+      <h1 className="text-black dark:text-white text-4xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center tracking-wide font-instrument underline decoration-wavy underline-offset-8 decoration-gray-900 dark:decoration-gray-200 py-6 sm:py-10 md:py-14 mb-6 sm:mb-10 md:mb-16">
+        Education
       </h1>
 
       {/* Big Card */}

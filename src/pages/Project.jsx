@@ -4,8 +4,6 @@ import guy from "../assets/images/guy.webm";
 import { GitHubCalendar } from 'react-github-calendar';
 import { useRef, useEffect } from "react";
 
-import projectSticker from "../assets/images/project.svg";
-
 const Project = () => {
   const scrollRef = useRef(null);
 
@@ -28,17 +26,8 @@ const Project = () => {
 
   return (
     <div id="projects" className="flex w-full flex-col justify-center my-20 px-4 sm:px-6 md:px-8 lg:px-8">
-      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl text-center mt-10 mb-20 sm:mb-24 lg:mb-30">
-        <span className="relative inline-flex items-center justify-center gap-3 sm:gap-5">
-          <span className="underline decoration-wavy underline-offset-20 decoration-gray-900 dark:decoration-gray-200">
-            Projects
-          </span>
-          <img 
-            src={projectSticker} 
-            alt="project sticker" 
-            className="w-9 h-9 sm:w-11 sm:h-11 md:w-13 md:h-13 lg:w-14 lg:h-14 bg-white border-[2.5px] border-white rounded-lg shadow-[0_4px_10px_rgba(0,0,0,0.15)] object-contain pointer-events-none select-none transition-all duration-300 ease-[cubic-bezier(0.175,0.885,0.32,1.275)] hover:scale-120 hover:rotate-[25deg] rotate-[15deg] shrink-0"
-          />
-        </span>
+      <h1 className="font-instrument-spaced tracking-wide font-bold text-black dark:text-white text-5xl sm:text-6xl lg:text-7xl underline decoration-wavy underline-offset-20 decoration-gray-900 dark:decoration-gray-200 text-center mt-10 mb-20 sm:mb-24 lg:mb-30">
+        Projects
       </h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto w-full items-start">

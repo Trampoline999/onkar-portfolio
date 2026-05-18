@@ -21,18 +21,19 @@ const ProfileCard = ({
 }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const descRef = useRef(null);
+  const descMeasureRef = useRef(null);
   const techRef = useRef(null);
   const [descHeight, setDescHeight] = useState(0);
   const [techHeight, setTechHeight] = useState(0);
 
   useEffect(() => {
-    if (!descRef.current) return;
+    if (!descMeasureRef.current) return;
     const observer = new ResizeObserver((entries) => {
       for (let entry of entries) {
         setDescHeight(entry.target.scrollHeight);
       }
     });
-    observer.observe(descRef.current);
+    observer.observe(descMeasureRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -106,25 +107,36 @@ const ProfileCard = ({
 
           {/* Description */}
           <div className="relative">
+            {/* Invisible clone to measure the exact full scrollHeight */}
+            <p
+              ref={descMeasureRef}
+              className="absolute top-0 left-0 right-0 invisible pointer-events-none text-[12px] sm:text-[13px] leading-relaxed"
+              aria-hidden="true"
+            >
+              {description}
+            </p>
+
             <div
               style={{
                 maxHeight: isExpanded ? `${descHeight}px` : undefined,
               }}
               className={`overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${
-                isExpanded ? "" : "max-h-[4.5rem] sm:max-h-[5.25rem]"
+                isExpanded ? "" : "max-h-[3.65rem] sm:max-h-[3.96rem]"
               }`}
             >
               <p
                 ref={descRef}
-                className="text-[12px] sm:text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed"
+                className={`text-[12px] sm:text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed ${
+                  isExpanded ? "" : "line-clamp-3"
+                }`}
               >
                 {description}
               </p>
             </div>
             {/* Fade overlay when collapsed and text is long */}
-            {descHeight > 84 && (
+            {descHeight > 65 && (
               <div
-                className={`absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-[#f0f0f0] dark:from-zinc-800 to-transparent pointer-events-none transition-opacity duration-500 ease-in-out ${
+                className={`absolute bottom-0 left-0 right-0 h-6 bg-gradient-to-t from-zinc-100 dark:from-zinc-800 to-transparent pointer-events-none transition-opacity duration-500 ease-in-out ${
                   isExpanded ? "opacity-0" : "opacity-100"
                 }`}
               />
