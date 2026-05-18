@@ -176,7 +176,7 @@ const Hero = () => {
 
         {/* Available badge */}
         <div
-          className="inline-flex items-center justify-start gap-1 sm:gap-2 text-[7px] sm:text-[9px] tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full"
+          className="inline-flex items-center justify-start gap-1 sm:gap-2 text-[7px] sm:text-[9px] tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg"
           style={{
             background: "rgba(255,255,255,0.15)",
             backdropFilter: "blur(8px)",
@@ -222,20 +222,20 @@ const Hero = () => {
         </p>
 
         {/* CTA */}
-        <div className="mt-4 sm:mt-8 w-full max-w-md">
+        <div className="mt-7 sm:mt-8 w-full max-w-md">
           <div className="flex justify-center items-center pb-2">
             <a
               href="mailto:onkarchougule99@gmail.com"
               className="
                 inline-block
-                bg-[#f4dfbe] text-[#6b3719]
+                bg-[#f6f4f1] dark:bg-[#1e1d1d] text-[#1e1d1d] dark:text-[#f6f4f1]
                 font-bricolage font-black uppercase tracking-widest
                 text-[11px] sm:text-sm
                 px-5 py-2 sm:px-9 sm:py-3.5
                 rounded-[10px] sm:rounded-[12px]
-                border-[1.5px] sm:border-[2px] border-[#c6ad8a]
-                shadow-[0_4px_0_0_#c6ad8a] sm:shadow-[0_6px_0_0_#c6ad8a]
-                hover:translate-y-[1.5px] sm:hover:translate-y-[2px] hover:shadow-[0_2.5px_0_0_#c6ad8a] sm:hover:shadow-[0_4px_0_0_#c6ad8a]
+                border-[1.5px] sm:border-[2px] border-[#2b2b2b] dark:border-[#f6f4f1]
+                shadow-[0_4px_0_0_#2b2b2b] sm:shadow-[0_6px_0_0_#2b2b2b] dark:shadow-[0_4px_0_0_#f6f4f1] dark:sm:shadow-[0_6px_0_0_#f6f4f1]
+                hover:translate-y-[1.5px] sm:hover:translate-y-[2px] hover:shadow-[0_2.5px_0_0_#2b2b2b] sm:hover:shadow-[0_4px_0_0_#2b2b2b] dark:hover:shadow-[0_2.5px_0_0_#f6f4f1] dark:sm:hover:shadow-[0_4px_0_0_#f6f4f1]
                 active:translate-y-[4px] sm:active:translate-y-[6px] active:shadow-none
                 transition-all duration-100 ease-out
                 select-none
