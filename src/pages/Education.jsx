@@ -48,8 +48,8 @@ const Education = () => {
             w-full mx-auto max-w-6xl
             flex flex-col lg:flex-row
             items-center
-            gap-8 sm:gap-12 lg:gap-16
-            p-6 sm:p-10 md:p-12 lg:p-16
+            gap-8 sm:gap-12 lg:gap-10
+            p-6 sm:p-10 md:p-12 lg:p-8
             mb-8 sm:mb-16 md:mb-24
             transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
             hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]
