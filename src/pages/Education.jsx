@@ -41,9 +41,9 @@ const Education = () => {
       <div className="w-full px-4 sm:px-6 md:px-10 lg:px-12">
         <div
           className="
-            bg-[#faf9f5] dark:bg-zinc-800
+            bg-gray-50 dark:bg-zinc-800
             border border-zinc-200/60 dark:border-zinc-800/80
-            rounded-[24px] sm:rounded-[40px]
+            rounded-[32px] sm:rounded-[32px]
             shadow-[0_15px_45px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_25px_60px_-25px_rgba(0,0,0,0.5)]
             w-full mx-auto max-w-6xl
             flex flex-col lg:flex-row
@@ -77,7 +77,7 @@ const Education = () => {
 
         
 
-            <p className="font-sans text-sm sm:text-base md:text-[17px] leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="font-sans text-sm sm:text-base md:text-[17px] leading-relaxed text-gray-700 dark:text-gray-300">
               A four-year <Highlighter action="highlight" color={c.blue}>
                 Computer Science &amp; Engineering
               </Highlighter>{" "}journey at D.Y. Patil College of Engineering &amp; Technology, Kolhapur, completed between{" "}
