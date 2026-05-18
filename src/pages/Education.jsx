@@ -41,9 +41,9 @@ const Education = () => {
       <div className="w-full px-4 sm:px-6 md:px-10 lg:px-12">
         <div
           className="
-            bg-zinc-100 dark:bg-zinc-800
+            bg-[#faf9f5] dark:bg-zinc-800
             border border-zinc-200/60 dark:border-zinc-800/80
-            rounded-[32px] sm:rounded-[40px]
+            rounded-[24px] sm:rounded-[40px]
             shadow-[0_15px_45px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_25px_60px_-25px_rgba(0,0,0,0.5)]
             w-full mx-auto max-w-6xl
             flex flex-col lg:flex-row
@@ -70,7 +70,7 @@ const Education = () => {
               </span>
             </div>
 
-            <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage tracking-normal leading-tight">
+            <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage leading-tight">
               D.Y Patil College of <br className="hidden sm:inline" />
               Engineering and Technology
             </h2>

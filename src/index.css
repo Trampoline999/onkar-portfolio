@@ -48,7 +48,7 @@
 }
 
 
-/* --bg-color:#f0ece7  initial bg-color */
+/* --bg-color:#f0ece7  initial bg-color. #f5f4f7 */
 :root {
   --bg-color: #f5f4f7;
   --initial-bg-color: #f0ece7 --background: oklch(1 0 0);
