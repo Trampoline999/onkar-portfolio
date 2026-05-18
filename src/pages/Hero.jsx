@@ -54,8 +54,8 @@ const Hero = () => {
           "
         >
           <span className="relative flex h-1 w-1 sm:h-1.2 sm:w-1.2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-md bg-[#4fa13f] opacity-75" />
-            <span className="relative inline-flex h-1 w-1 sm:h-1.2 sm:w-1.2 rounded-md bg-[#3d8330]" />
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-lg bg-[#4fa13f] opacity-75" />
+            <span className="relative inline-flex h-1 w-1 sm:h-1.2 sm:w-1.2 rounded-lg bg-[#3d8330]" />
           </span>
           Available for work
         </div>
