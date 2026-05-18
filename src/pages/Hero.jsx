@@ -1,6 +1,5 @@
 import { Player } from '@lottiefiles/react-lottie-player';
 import mac from "../assets/images/mac.json";
-import { InteractiveHoverButton } from "../../components/ui/interactive-hover-button"
 import RetroIcons from "../../components/RetroIcons";
 
 /* Repeat enough times so the seamless-loop duplicate fills any screen width */
@@ -39,17 +38,24 @@ const Hero = () => {
 
         {/* Available badge */}
         <div
-          className="inline-flex items-center justify-start gap-1.5 sm:gap-2 text-[8px] sm:text-xs tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2 py-1 sm:px-3 sm:py-2 rounded-full"
-          style={{
-            background: "rgba(255,255,255,0.15)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
-            border: "1px solid rgba(255,255,255,0.2)",
-          }}
+          className="
+            inline-flex items-center justify-start gap-1
+            bg-[#d6f0be] text-[#2d5128]
+            font-bricolage font-black uppercase tracking-widest
+            text-[6px] sm:text-[8px]
+            px-2.5 py-1 sm:px-3.5 sm:py-1.5
+            rounded-[2px] sm:rounded-[6px]
+            border-[0.75px] sm:border-[1px] border-[#acc79a]
+            shadow-[0_2px_0_0_#acc79a]
+            hover:translate-y-[-0.5px] hover:shadow-[0_2.5px_0_0_#acc79a]
+            transition-all duration-100 ease-out
+            mb-4 sm:mb-6
+            select-none
+          "
         >
-          <span className="relative flex h-1.5 w-1.5 sm:h-2 sm:w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-            <span className="relative inline-flex h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-green-500" />
+          <span className="relative flex h-1 w-1 sm:h-1.2 sm:w-1.2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-md bg-[#4fa13f] opacity-75" />
+            <span className="relative inline-flex h-1 w-1 sm:h-1.2 sm:w-1.2 rounded-md bg-[#3d8330]" />
           </span>
           Available for work
         </div>
@@ -79,12 +85,26 @@ const Hero = () => {
         </p>
 
         {/* CTA */}
-        <div className="mt-8 w-full max-w-md">
-          <div className="flex justify-center items-center">
-            <a href="mailto:onkarchougule99@gmail.com">
-              <InteractiveHoverButton className="rounded-full border border-black/20 dark:border-white/20 bg-black/10 dark:bg-white/15 px-6 py-2 text-xs sm:text-sm font-semibold tracking-wider text-black dark:text-white backdrop-blur-sm transition">
-                Email Me
-              </InteractiveHoverButton>
+        <div className="mt-4 sm:mt-8 w-full max-w-md">
+          <div className="flex justify-center items-center pb-2">
+            <a
+              href="mailto:onkarchougule99@gmail.com"
+              className="
+                inline-block
+                bg-[#f4dfbe] text-[#6b3719]
+                font-bricolage font-black uppercase tracking-widest
+                text-[11px] sm:text-sm
+                px-5 py-2 sm:px-9 sm:py-3.5
+                rounded-[10px] sm:rounded-[12px]
+                border-[1.5px] sm:border-[2px] border-[#c6ad8a]
+                shadow-[0_4px_0_0_#c6ad8a] sm:shadow-[0_6px_0_0_#c6ad8a]
+                hover:translate-y-[1.5px] sm:hover:translate-y-[2px] hover:shadow-[0_2.5px_0_0_#c6ad8a] sm:hover:shadow-[0_4px_0_0_#c6ad8a]
+                active:translate-y-[4px] sm:active:translate-y-[6px] active:shadow-none
+                transition-all duration-100 ease-out
+                select-none
+              "
+            >
+              Email Me
             </a>
           </div>
         </div>
