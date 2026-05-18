@@ -3,9 +3,16 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import mac from "../assets/images/mac.json";
 import RetroIcons from "../../components/RetroIcons";
 
-const casingColors = ['blue', 'green', 'yellow', 'purple', 'pink', 'orange'];
+const casingColors = ['beige', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange'];
 
 const colorPalettes = {
+  beige: {
+    highlight: [1.0, 0.95, 0.88],
+    base: [0.93, 0.89, 0.84],
+    shadow: [0.88, 0.85, 0.81],
+    deepShadow: [0.82, 0.79, 0.75],
+    grooves: [0.65, 0.63, 0.6]
+  },
   blue: {
     highlight: [0.93, 0.97, 1.0],
     base: [0.79, 0.92, 0.99],
@@ -52,13 +59,13 @@ const colorPalettes = {
 
 const round = (val) => Math.round(val * 100) / 100;
 
-// Source keys from current blue mac.json
+// Source keys from restored beige/grey mac.json
 const sourceKeys = {
-  '0.93, 0.97, 1': 'highlight',
-  '0.79, 0.92, 0.99': 'base',
-  '0.64, 0.84, 0.96': 'shadow',
-  '0.48, 0.72, 0.88': 'deepShadow',
-  '0.3, 0.49, 0.62': 'grooves'
+  '1, 0.95, 0.88': 'highlight',
+  '0.93, 0.89, 0.84': 'base',
+  '0.88, 0.85, 0.81': 'shadow',
+  '0.82, 0.79, 0.75': 'deepShadow',
+  '0.65, 0.63, 0.6': 'grooves'
 };
 
 const getTargetColor = (rgbArray, colorName) => {
@@ -109,7 +116,7 @@ const generateLottieForColor = (baseData, colorName) => {
   return cloned;
 };
 
-// Global cache for the 6 pre-built Lottie data objects
+// Global cache for pre-built Lottie data objects
 const lottieCache = {};
 
 const getLottieData = (colorName) => {
@@ -136,7 +143,7 @@ const NameStrip = () => (
 );
 
 const Hero = () => {
-  const [currentColor, setCurrentColor] = useState('blue');
+  const [currentColor, setCurrentColor] = useState('beige');
 
   const cycleColor = () => {
     setCurrentColor((prev) => {
