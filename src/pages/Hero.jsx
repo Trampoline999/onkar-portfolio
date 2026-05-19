@@ -176,11 +176,11 @@ const Hero = () => {
 
         {/* Available badge */}
         <div
-          className="inline-flex items-center justify-start gap-1 sm:gap-2 text-[7px] sm:text-[9px] tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg"
+          className="inline-flex items-center justify-start font-medium gap-1 sm:gap-2 text-[7px] sm:text-[9px] tracking-widest uppercase mb-4 sm:mb-6 text-black dark:text-white px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-lg"
           style={{
             background: "rgba(255,255,255,0.15)",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
+            backdropFilter: "blur(24px)",
+            WebkitBackdropFilter: "blur(24px)",
             border: "1px solid rgba(255,255,255,0.2)",
           }}
         >

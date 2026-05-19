@@ -57,10 +57,13 @@ const Project = () => {
       </div>
 
       <div className="flex flex-col items-center justify-center mt-24 sm:mt-32 w-full max-w-7xl mx-auto">
-        <h2 className="font-bricolage font-semibold text-black  dark:text-white text-3xl sm:text-4xl lg:text-5xl mb-12 sm:mb-16">
+        <h2 className="font-bricolage font-medium text-black dark:text-white text-3xl sm:text-4xl lg:text-5xl mb-4 sm:mb-6">
           GitHub Contributions
         </h2>
-        <div ref={scrollRef} className="w-full flex justify-center p-6 sm:p-10 bg-gray-100  border-1 border-[#f0f0f0] dark:border-zinc-600 dark:bg-zinc-800 rounded-2xl shadow-sm overflow-x-auto">
+        <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base text-center max-w-2xl mb-10 font-bricolage leading-relaxed">
+          A snapshot of my daily commits, open-source activity, and consistency in pushing code. I believe in building in public and shipping updates daily to refine my engineering skills.
+        </p>
+        <div ref={scrollRef} className="w-full flex justify-center p-6 sm:p-10 bg-gray-100 border-1 border-[#f0f0f0] dark:border-zinc-600 dark:bg-zinc-800 rounded-2xl shadow-sm overflow-x-auto">
           <div className="min-w-fit">
             <GitHubCalendar 
               username="Trampoline999" 
