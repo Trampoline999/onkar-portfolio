@@ -77,7 +77,7 @@ const Education = () => {
 
         
 
-            <p className="font-sans text-sm sm:text-base md:text-[17px] leading-relaxed text-gray-700 dark:text-gray-300">
+            <p className="font-sans text-sm sm:text-base md:text-[17px] antialiased leading-relaxed text-gray-800 dark:text-gray-300">
               A four-year <Highlighter action="highlight" color={c.blue}>
                 Computer Science &amp; Engineering
               </Highlighter>{" "}journey at D.Y. Patil College of Engineering &amp; Technology, Kolhapur, completed between{" "}
