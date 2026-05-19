@@ -14,6 +14,16 @@
   src: url('./assets/fonts/0-MonoLisa-normal.woff2') format('woff2'),
 }
 
+@font-face {
+  font-family: 'Geist-Pixel';
+  src: url('./assets/fonts/GeistPixel-Square.woff2') format('woff2'),
+}
+
+@font-face {
+  font-family: 'Departure Mono';
+  src: url('./assets/fonts/DepartureMono-Regular.woff2') format('woff2'),
+}
+
 /* Smooth theme transition */
 
 *::before,
@@ -30,7 +40,8 @@
 @theme {
   /* This creates the 'font-mono-lisa' utility class */
   --font-monolisa: "Monolisa", monospace;
-  --font-departure-mono: "departure-mono", monospace;
+  --font-departure-mono: "Departure Mono", monospace;
+  --font-geist-pixel: "Geist-Pixel", monospace;
   --font-bricolage: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
 
   /* OPTIONAL: To make it the default global font for the whole app */

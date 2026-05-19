@@ -78,7 +78,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex flex-col items-center pt-6 px-4 font-monolisa">
+    <div className="flex flex-col items-center pt-6 px-4 font-geist-pixel font-black">
       {/* ── Desktop & Tablet Nav (sm+) ───────────────────────── */}
       <nav
         className="hidden sm:flex items-center gap-1 px-4 py-2.5 rounded-full relative z-20"

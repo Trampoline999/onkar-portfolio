@@ -39,7 +39,7 @@ const Project = () => {
               <strong>Codewar</strong> is a <strong>full-stack coding platform</strong> built with the MERN stack that allows users to write and execute code in real-time using the <strong>Judge0 API</strong>. It features authentication, problem categorization, difficulty filters, and playlist management backed by PostgreSQL and Prisma ORM. Global state is handled efficiently with <strong>Zustand</strong>, ensuring smooth user experience across all components. The UI is built with TailwindCSS and DaisyUI for a clean, responsive, and intuitive interface.
             </>
           }
-          techstack="PostgreSQL, JavaScript, REST APIs, Zustand, TailwindCSS, Express, React, Node.js, Prisma ORM, Judge0 API"
+          techstack="React, JavaScript, Express,REST APIs,TailwindCSS,PostgreSQL, Node.js, Zustand,Prisma ORM, Judge0 API"
           githubLink="https://github.com/Trampoline999/codewar"
         />
         <ProfileCard

@@ -56,10 +56,10 @@ const Education = () => {
             hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]
 "
         >
-          <Card video={college} className="w-full max-w-[360px] aspect-video sm:h-[560px] sm:aspect-auto rounded-[20px]" />
+          <Card video={college} className="w-full max-w-[360px] md:max-w-full aspect-video md:aspect-[21/9] lg:max-w-[360px] lg:h-[560px] lg:aspect-auto rounded-[20px]" />
 
           {/* Text */}
-          <div className="flex flex-col text-left max-w-2xl lg:items-start lg:text-left flex-1">
+          <div className="flex flex-col text-left md:text-center lg:text-left items-start md:items-center lg:items-start max-w-2xl flex-1">
             
             <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage leading-tight">
               D.Y Patil College of <br className="hidden sm:inline" />
