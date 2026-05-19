@@ -86,7 +86,7 @@ export default function Navbar() {
       >
         <button
           onClick={() => handleScroll("hero")}
-          className="px-4 py-2 text-sm font-bold tracking-tight mr-2 rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
+          className="px-4 py-2 text-sm font-bold mr-2 rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
         >
           {BRAND_NAME}
         </button>
