@@ -30,24 +30,25 @@ const Project = () => {
         Projects
       </h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto w-full items-start">
+      <div className="flex flex-col gap-12 lg:gap-20 max-w-full px-0 lg:px-4 xl:px-12 mx-auto w-full items-start">
          <ProfileCard
           videoSrc={guy}
           name="Codewar"
           description={
             <>
-              <strong>Codewar</strong> is a <strong>full-stack coding platform</strong> built with the MERN stack that allows users to write and execute code in <strong>real-time</strong> using the <strong>Judge0 API</strong>. It features authentication, problem categorization, difficulty filters, and playlist management backed by <strong>PostgreSQL</strong> and <strong>Prisma ORM</strong>. <strong>Global state</strong> is handled efficiently with <strong>Zustand</strong>, ensuring smooth user experience across all components. The UI is built with <strong>TailwindCSS</strong> and <strong>DaisyUI</strong> for a clean, responsive, and intuitive interface.
+              <strong>Codewar</strong> is a <strong>full-stack coding platform</strong> built with the MERN stack that allows users to write and execute code in real-time using the <strong>Judge0 API</strong>. It features authentication, problem categorization, difficulty filters, and playlist management backed by PostgreSQL and Prisma ORM. Global state is handled efficiently with <strong>Zustand</strong>, ensuring smooth user experience across all components. The UI is built with TailwindCSS and DaisyUI for a clean, responsive, and intuitive interface.
             </>
           }
           techstack="PostgreSQL, JavaScript, REST APIs, Zustand, TailwindCSS, Express, React, Node.js, Prisma ORM, Judge0 API"
           githubLink="https://github.com/Trampoline999/codewar"
         />
         <ProfileCard
+          reverse={true}
           imageSrc={hospital}
           name="Hospital Management"
           description={
             <>
-              A <strong>centralized healthcare platform</strong> that connects patients, doctors, and hospitals under one unified system. It supports <strong>patient registration</strong>, <strong>appointment scheduling</strong>, and <strong>Electronic Health Record (EHR) management</strong> for streamlined clinical workflows. <strong>Admin panels</strong> provide hospital management capabilities along with <strong>statistical dashboards</strong> for <strong>data-driven decisions</strong>. Future modules are planned for blood bank tracking and real-time bed availability monitoring.
+              A <strong>centralized healthcare platform</strong> that connects patients, doctors, and hospitals under one unified system. It supports <strong>patient registration</strong>, <strong>appointment scheduling</strong>, and <strong>Electronic Health Record (EHR) management</strong> for streamlined clinical workflows. Admin panels provide hospital management capabilities along with statistical dashboards for data-driven decisions. Future modules are planned for blood bank tracking and real-time bed availability monitoring.
             </>
           }
           techstack="Python, Django, PostgreSQL, JavaScript, REST APIs, Bootstrap, HTML Templates"

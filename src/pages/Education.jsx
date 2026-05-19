@@ -59,7 +59,7 @@ const Education = () => {
           <Card video={college} />
 
           {/* Text */}
-          <div className="flex flex-col text-left gap-4 sm:gap-5 max-w-2xl lg:items-start lg:text-left flex-1">
+          <div className="flex flex-col text-left max-w-2xl lg:items-start lg:text-left flex-1">
             
             <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage leading-tight">
               D.Y Patil College of <br className="hidden sm:inline" />
