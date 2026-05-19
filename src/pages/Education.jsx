@@ -46,17 +46,17 @@ const Education = () => {
             border border-zinc-200/60 dark:border-zinc-800/80
             rounded-[32px] sm:rounded-[32px]
             shadow-[0_15px_45px_-15px_rgba(0,0,0,0.06)] dark:shadow-[0_25px_60px_-25px_rgba(0,0,0,0.5)]
-            w-full mx-auto max-w-6xl
+            w-full mx-auto max-w-[1440px]
             flex flex-col lg:flex-row
             items-center
-            gap-8 sm:gap-12 lg:gap-10
-            p-6 sm:p-10 md:p-12 lg:p-8
+            gap-8 sm:gap-12 lg:gap-32
+            p-4 sm:p-4 md:p-6 lg:p-10
             mb-8 sm:mb-16 md:mb-24
             transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
             hover:shadow-[0_25px_70px_-20px_rgba(0,0,0,0.12)] dark:hover:shadow-[0_30px_80px_-20px_rgba(0,0,0,0.7)]
 "
         >
-          <Card video={college} />
+          <Card video={college} className="w-full max-w-[360px] aspect-video sm:h-[560px] sm:aspect-auto rounded-[20px]" />
 
           {/* Text */}
           <div className="flex flex-col text-left max-w-2xl lg:items-start lg:text-left flex-1">
