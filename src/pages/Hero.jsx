@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { motion } from "motion/react";
 import mac from "../assets/images/mac.json";
 import RetroIcons from "../../components/RetroIcons";
 
@@ -84,10 +85,10 @@ const getTargetColor = (rgbArray, colorName) => {
 
 const generateLottieForColor = (baseData, colorName) => {
   const cloned = JSON.parse(JSON.stringify(baseData));
-  
+
   const traverseAndReplace = (obj) => {
     if (!obj || typeof obj !== 'object') return;
-    
+
     if (obj.c && obj.c.k) {
       const k = obj.c.k;
       if (Array.isArray(k) && typeof k[0] === 'number') {
@@ -106,12 +107,12 @@ const generateLottieForColor = (baseData, colorName) => {
         });
       }
     }
-    
+
     for (let key in obj) {
       traverseAndReplace(obj[key]);
     }
   };
-  
+
   traverseAndReplace(cloned);
   return cloned;
 };
@@ -144,9 +145,12 @@ const NameStrip = () => (
 
 const Hero = () => {
   const [currentColor, setCurrentColor] = useState('beige');
+  const [prevColor, setPrevColor] = useState('beige');
+  const [hasBeenHovered, setHasBeenHovered] = useState(false);
 
   const cycleColor = () => {
     setCurrentColor((prev) => {
+      setPrevColor(prev);
       const currentIndex = casingColors.indexOf(prev);
       const nextIndex = (currentIndex + 1) % casingColors.length;
       return casingColors[nextIndex];
@@ -157,21 +161,50 @@ const Hero = () => {
     <section id="hero" className="relative min-h-[758px] flex flex-col items-center justify-start overflow-hidden scroll-mt-24">
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-48 sm:pt-50 lg:pt-50">
-        <div 
-          onMouseEnter={cycleColor}
+        <div
+          onMouseEnter={() => {
+            cycleColor();
+            setHasBeenHovered(true);
+          }}
           onClick={cycleColor}
-          className="relative flex items-center justify-center cursor-pointer"
+          className="relative flex items-center justify-center cursor-pointer p-4"
         >
           {/* Retro Icons - Standalone Component */}
-          <RetroIcons />
+          <RetroIcons activeColor={currentColor} hasBeenHovered={hasBeenHovered} />
 
-          <Player
-            src={getLottieData(currentColor)}
-            className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain relative z-10 pointer-events-none mac-lottie-player"
-            autoplay
-            loop
-            style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
-          />
+          {/* Mac Player Wrapper with Peel Transition */}
+          <div className="relative flex items-center justify-center overflow-hidden rounded-3xl">
+            {/* Previous Color Player */}
+            {prevColor !== currentColor && (
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+                <Player
+                  src={getLottieData(prevColor)}
+                  className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain pointer-events-none mac-lottie-player"
+                  autoplay
+                  loop
+                  style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
+                />
+              </div>
+            )}
+
+
+            {/* Foreground/New Color Player with clip-path reveal */}
+            <motion.div
+              key={currentColor}
+              initial={hasBeenHovered ? { clipPath: 'polygon(-10% 110%, -10% 110%, -10% 110%, -10% 110%, -10% 110%)' } : false}
+              animate={{ clipPath: 'polygon(-10% 110%, -10% -10%, 110% -10%, 110% 110%, -10% 110%)' }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              className="relative z-10 flex items-center justify-center"
+            >
+              <Player
+                src={getLottieData(currentColor)}
+                className="w-60 sm:w-60 md:w-72 lg:w-80 object-contain pointer-events-none mac-lottie-player"
+                autoplay
+                loop
+                style={{ transform: "perspective(2000px) rotateY(0deg) rotateX(0deg)" }}
+              />
+            </motion.div>
+          </div>
         </div>
 
         {/* Available badge */}
@@ -185,11 +218,11 @@ const Hero = () => {
           }}
         >
           <span className="relative flex h-1 w-1 sm:h-1.5 sm:w-1.5">
-            <span 
+            <span
               className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75"
               style={{ backgroundColor: '#22c55e' }}
             />
-            <span 
+            <span
               className="relative inline-flex h-full w-full rounded-full"
               style={{ backgroundColor: '#22c55e' }}
             />
