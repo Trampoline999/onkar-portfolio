@@ -23,7 +23,7 @@ export const TextReveal = ({ children, className }) => {
   return (
     <div ref={sectionRef} className={cn("relative z-0", className)}>
       <div className="mx-auto flex w-full items-center bg-transparent py-4">
-        <p className="flex flex-wrap items-center gap-y-1 text-sm sm:text-base md:text-[17px] font-sans text-black/20 dark:text-white/20">
+        <p className="flex flex-wrap items-center gap-y-0.5 text-sm sm:text-base md:text-[17px] font-sans text-black/20 dark:text-white/20">
           {tokens.map((token, i) => {
             const start = i / tokens.length
             const end = start + 1 / tokens.length

@@ -52,7 +52,7 @@
 
 /* --bg-color:#f0ece7  initial bg-color. #f5f4f7 */
 :root {
-  --bg-color: #f5f4f7;
+  --bg-color: #fbf8f7;
   --initial-bg-color: #f0ece7 --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);

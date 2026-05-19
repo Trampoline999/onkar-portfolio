@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "../customComp/Card";
 import college from "../assets/images/dypani.webm";
-import { Highlighter } from "../../components/ui/highlighter";
+
 import { TextReveal } from "../../components/ui/text-reveal";
 
 /** Watches the `dark` class on <html> and re-renders on change */
