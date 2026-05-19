@@ -216,7 +216,7 @@ const Hero = () => {
         </div>
 
         {/* Sub-tagline */}
-        <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-700 dark:text-neutral-300 tracking leading-tight font-geist-pixel">
+        <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-700 dark:text-neutral-300 tracking leading-normal font-geist-pixel font-semibold">
           I love building things that work beautifully — clean code, smooth
           interactions, and products that feel alive.
         </p>

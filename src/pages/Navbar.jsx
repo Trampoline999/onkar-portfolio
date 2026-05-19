@@ -78,7 +78,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex flex-col items-center pt-6 px-4 font-geist-pixel font-black">
+    <div className="flex flex-col items-center pt-6 px-4 font-monolisa">
       {/* ── Desktop & Tablet Nav (sm+) ───────────────────────── */}
       <nav
         className="hidden sm:flex items-center gap-1 px-4 py-2.5 rounded-full relative z-20"
@@ -86,7 +86,7 @@ export default function Navbar() {
       >
         <button
           onClick={() => handleScroll("hero")}
-          className="px-4 py-2 text-sm font-bold mr-2 rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
+          className="px-4 py-2 text-sm font-bold tracking-tight mr-2 rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
         >
           {BRAND_NAME}
         </button>
@@ -118,7 +118,7 @@ export default function Navbar() {
         >
           <button
             onClick={() => handleScroll("hero")}
-            className="px-4 py-2 text-sm font-bold rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
+            className="px-4 py-2 text-sm font-black rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
           >
             {BRAND_NAME}
           </button>
