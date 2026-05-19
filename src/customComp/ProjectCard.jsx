@@ -145,7 +145,7 @@ const ProfileCard = ({
           {techstack && (
             <div 
               onClick={() => setIsTechExpanded(!isTechExpanded)}
-              className={`flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-100 dark:border-zinc-800 transition-all duration-500 ease-in-out cursor-pointer select-none overflow-hidden ${
+              className={`flex flex-wrap gap-2 mt-auto pt-4 font-geist-pixel font-semibold tracking-wide border-t border-gray-100 dark:border-zinc-800 transition-all duration-500 ease-in-out cursor-pointer select-none overflow-hidden ${
                 isTechExpanded ? "max-h-[300px]" : "max-h-[48px] hover:max-h-[300px]"
               }`}
             >

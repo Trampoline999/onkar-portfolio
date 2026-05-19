@@ -16,12 +16,17 @@
 
 @font-face {
   font-family: 'Geist-Pixel';
-  src: url('./assets/fonts/GeistPixel-Square.woff2') format('woff2'),
+  src: url('./assets/fonts/GeistPixel-Square.woff2') format('woff2');
+  font-feature-settings: "ss04" on;
 }
 
 @font-face {
   font-family: 'Departure Mono';
-  src: url('./assets/fonts/DepartureMono-Regular.woff2') format('woff2'),
+  src: url('./assets/fonts/DepartureMono-Regular.woff2') format('woff2');
+}
+
+.font-geist-pixel {
+  font-feature-settings: "ss03" on;
 }
 
 /* Smooth theme transition */
