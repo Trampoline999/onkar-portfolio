@@ -222,7 +222,7 @@ const Hero = () => {
         </p>
 
         {/* CTA */}
-        <div className="mt-7 sm:mt-12 w-full max-w-md">
+        <div className="mt-7 sm:mt-10 lg:mt-12 w-full max-w-md">
           <div className="flex justify-center items-center pb-2">
             <a
               href="mailto:onkarchougule99@gmail.com"
