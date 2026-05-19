@@ -161,14 +161,7 @@ const Hero = () => {
     <section id="hero" className="relative min-h-[758px] flex flex-col items-center justify-start overflow-hidden scroll-mt-24">
       {/* Hero content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-48 sm:pt-50 lg:pt-50">
-        <div
-          onMouseEnter={() => {
-            cycleColor();
-            setHasBeenHovered(true);
-          }}
-          onClick={cycleColor}
-          className="relative flex items-center justify-center cursor-pointer p-4"
-        >
+        <div className="relative flex items-center justify-center p-4">
           {/* Retro Icons - Standalone Component */}
           <RetroIcons activeColor={currentColor} hasBeenHovered={hasBeenHovered} />
 
@@ -205,6 +198,16 @@ const Hero = () => {
               />
             </motion.div>
           </div>
+
+          {/* Invisible hover overlay to restrict interactive area precisely to the Mac casing */}
+          <div
+            onMouseEnter={() => {
+              cycleColor();
+              setHasBeenHovered(true);
+            }}
+            onClick={cycleColor}
+            className="absolute inset-0 m-auto w-32 h-36 sm:w-32 sm:h-36 md:w-40 md:h-44 lg:w-44 lg:h-48 z-30 cursor-pointer bg-transparent rounded-2xl"
+          />
         </div>
 
         {/* Available badge */}
