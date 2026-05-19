@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Card from "../customComp/Card";
 import college from "../assets/images/dypani.webm";
 import { Highlighter } from "../../components/ui/highlighter";
+import { TextReveal } from "../../components/ui/text-reveal";
 
 /** Watches the `dark` class on <html> and re-renders on change */
 function useDarkMode() {
@@ -60,30 +61,44 @@ const Education = () => {
           {/* Text */}
           <div className="flex flex-col text-left gap-4 sm:gap-5 max-w-2xl lg:items-start lg:text-left flex-1">
             
-            {/* Institution Badge & Date */}
-            {/* <div className="flex flex-wrap items-center gap-2.5 sm:gap-3">
-              <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-blue-100/80 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-200/50 dark:border-blue-850/50 select-none">
-                Bachelor of Technology
-              </span>
-              <span className="px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-wider uppercase bg-amber-100/80 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300 border border-amber-200/50 dark:border-amber-850/50 select-none">
-                2019 - 2024
-              </span>
-            </div> */}
-
             <h2 className="text-gray-900 dark:text-white text-2xl sm:text-3xl md:text-4xl font-extrabold font-bricolage leading-tight">
               D.Y Patil College of <br className="hidden sm:inline" />
               Engineering and Technology
             </h2>
 
-        
-
-            <p className="font-sans text-sm sm:text-base md:text-[17px] antialiased leading-relaxed text-gray-800 dark:text-gray-300">
-              A four-year <Highlighter action="highlight" color={c.blue}>
-                Computer Science &amp; Engineering
-              </Highlighter>{" "}journey at D.Y. Patil College of Engineering &amp; Technology, Kolhapur, completed between{" "}
-              <Highlighter action="underline" color={c.orange}>2019-2024</Highlighter>{" "}graduating with a{" "}
-              <Highlighter action="highlight" color={c.green}>CGPA of 7.76</Highlighter> and a passion for building real-world applications.
-            </p>
+            <div className="w-full">
+              <TextReveal>
+                {[
+                  { text: "A", className: "" },
+                  { text: "four-year", className: "" },
+                  { text: "Computer Science & Engineering", className: "inline-flex px-1 py-[0.5px] rounded-md bg-sky-100 text-sky-600 dark:bg-sky-500/20 dark:text-sky-300 tracking-tight" },
+                  { text: "journey", className: "" },
+                  { text: "at", className: "" },
+                  { text: "D.Y.", className: "" },
+                  { text: "Patil", className: "" },
+                  { text: "College", className: "" },
+                  { text: "of", className: "" },
+                  { text: "Engineering", className: "" },
+                  { text: "&", className: "" },
+                  { text: "Technology,", className: "" },
+                  { text: "Kolhapur,", className: "" },
+                  { text: "completed", className: "" },
+                  { text: "between", className: "" },
+                  { text: "2019-2024", className: "inline-flex px-1 py-[0.5px] rounded-md bg-orange-100 text-orange-600 dark:bg-orange-500/20 dark:text-orange-300 tracking-tight" },
+                  { text: "graduating", className: "" },
+                  { text: "with", className: "" },
+                  { text: "a", className: "" },
+                  { text: "CGPA of 7.76", className: "inline-flex px-1 py-[0.5px] rounded-md bg-emerald-100 text-emerald-600 dark:bg-emerald-500/20 dark:text-emerald-300 tracking-tight" },
+                  { text: "and", className: "" },
+                  { text: "a", className: "" },
+                  { text: "passion", className: "" },
+                  { text: "for", className: "" },
+                  { text: "building", className: "" },
+                  { text: "real-world", className: "" },
+                  { text: "applications.", className: "" },
+                ]}
+              </TextReveal>
+            </div>
 
             <a
               href="https://coek.dypgroup.edu.in/"
@@ -102,11 +117,11 @@ const Education = () => {
                 hover:translate-y-[1px] sm:hover:translate-y-[1.5px] hover:shadow-[0_1.5px_0_0_#1a4469] sm:hover:shadow-[0_2.5px_0_0_#1a4469]
                 active:translate-y-[2.5px] sm:active:translate-y-[4px] active:shadow-none
                 transition-all duration-100 ease-out
-                select-none`
+                select-none
                 mt-2.5 sm:mt-3
               "
             >
-                College
+              College
             </a>
           </div>
         </div>

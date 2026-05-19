@@ -6,6 +6,7 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/geist";
 
+
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
@@ -29,6 +30,7 @@
 @theme {
   /* This creates the 'font-mono-lisa' utility class */
   --font-monolisa: "Monolisa", monospace;
+  --font-departure-mono: "departure-mono", monospace;
   --font-bricolage: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
 
   /* OPTIONAL: To make it the default global font for the whole app */

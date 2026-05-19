@@ -57,7 +57,7 @@ const Carousel = () => {
         {CARDS.map((card) => (
           <div
             key={card.id}
-            className="relative w-[85vw] sm:w-[380px] md:w-[420px] h-[550px] md:h-[650px] shrink-0 rounded-[32px] overflow-hidden snap-start border-4 border-white dark:border-zinc-800"
+            className="group relative w-[85vw] sm:w-[380px] md:w-[420px] h-[550px] md:h-[650px] shrink-0 rounded-[32px] overflow-hidden snap-start border-4 border-white dark:border-zinc-800 cursor-pointer"
           >
             <video
               src={card.video}
@@ -68,7 +68,7 @@ const Carousel = () => {
               // Important: Ensure the video covers the container
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute bottom-0 left-0 w-full p-8 md:p-8 z-20 bg-gradient-to-t from-black/40 via-black/5 to-transparent">
+            <div className="absolute bottom-0 left-0 w-full p-8 md:p-8 z-20 bg-gradient-to-t from-black/50 via-black/10">
               <p className="text-white/90 text-sm md:text-base font-medium mb-3 tracking-wide drop-shadow-lg">
                 {card.category}
               </p>
