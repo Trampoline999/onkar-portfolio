@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import { motion } from "motion/react";
 import mac from "../assets/images/mac.json";
 import RetroIcons from "../../components/RetroIcons";
+import { TypingAnimation } from "../../components/ui/typing-animation";
 
 const casingColors = ['beige', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange'];
 
@@ -143,10 +144,84 @@ const NameStrip = () => (
   </>
 );
 
+const casingColorHex = {
+  beige: '#ede3d6',
+  blue: '#c9ebfc',
+  green: '#d1f2c7',
+  yellow: '#faf0bf',
+  purple: '#e0c9f2',
+  pink: '#f7ccdb',
+  orange: '#fad9b8'
+};
+
+const casingColorBorderHex = {
+  beige: '#2b2b2b',
+  blue: '#1e3a8a',
+  green: '#14532d',
+  yellow: '#ffb703',
+  purple: '#4c1d95',
+  pink: '#831843',
+  orange: '#fb8500'
+};
+
 const Hero = () => {
   const [currentColor, setCurrentColor] = useState('beige');
   const [prevColor, setPrevColor] = useState('beige');
   const [hasBeenHovered, setHasBeenHovered] = useState(false);
+
+  useEffect(() => {
+    let active = true;
+    let count = 0;
+    const interval = setInterval(() => {
+      if (!active) return;
+
+      const playerContainers = document.querySelectorAll('.mac-lottie-player');
+      let found = false;
+      playerContainers.forEach((container) => {
+        const helloGroups = container.querySelectorAll('g[aria-label="hello"]');
+        if (helloGroups.length > 0) {
+          found = true;
+          helloGroups.forEach((group) => {
+            // Hide the default hello text paths
+            const paths = group.querySelectorAll('path');
+            paths.forEach((p) => {
+              p.style.display = 'none';
+            });
+
+            // Add our custom text if it's not already added
+            let textEl = group.querySelector('.custom-screen-text');
+            if (!textEl) {
+              textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+              textEl.setAttribute('class', 'custom-screen-text');
+              textEl.setAttribute('x', '0');
+              textEl.setAttribute('y', '30'); // Centered vertically in lottie coordinates
+              textEl.setAttribute('text-anchor', 'middle');
+              textEl.setAttribute('fill', '#000000');
+              
+              // Sacramento is imported in index.html, with fallbacks to other gorgeous scripts
+              textEl.style.fontFamily = '"Sacramento", "Pacifico", "Great Vibes", "Yellowtail", cursive';
+              textEl.style.fontSize = '120px';
+              textEl.style.fontWeight = '500';
+              textEl.textContent = 'onkar';
+
+              group.appendChild(textEl);
+            }
+          });
+        }
+      });
+
+      count++;
+      // Keep checking up to 2 seconds or until we find it
+      if (found || count > 20) {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => {
+      active = false;
+      clearInterval(interval);
+    };
+  }, [currentColor, prevColor]);
 
   const cycleColor = () => {
     setCurrentColor((prev) => {
@@ -251,27 +326,34 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Sub-tagline */}
-        <p className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-700 dark:text-neutral-300 leading-normal  font-geist-pixel">
-          I love building things that work beautifully — clean code, smooth
-          interactions, and products that feel alive.
-        </p>
+        <TypingAnimation
+          as="p"
+          className="text-xs sm:text-base md:text-l max-w-[260px] sm:max-w-sm md:max-w-md text-neutral-700 dark:text-neutral-300 leading-normal font-geist-pixel block"
+          duration={30}
+          showCursor={true}
+        >
+          I love building things that work beautifully — clean code, smooth interactions, and products that feel alive.
+        </TypingAnimation>
 
         {/* CTA */}
         <div className="mt-7 sm:mt-10 lg:mt-12 w-full max-w-md">
           <div className="flex justify-center items-center pb-2">
             <a
               href="mailto:onkarchougule99@gmail.com"
+              style={{
+                backgroundColor: casingColorHex[currentColor],
+                color: '#1e1d1d',
+                '--btn-color': casingColorBorderHex[currentColor]
+              }}
               className="
                 inline-block
-                bg-[#f6f4f1] dark:bg-[#1e1d1d] text-[#1e1d1d] dark:text-[#f6f4f1]
                 font-bricolage font-black uppercase tracking-widest
                 text-[11px] sm:text-sm
                 px-5 py-2 sm:px-9 sm:py-3.5
                 rounded-[10px] sm:rounded-[12px]
-                border-[1.5px] sm:border-[2px] border-[#2b2b2b] dark:border-[#f6f4f1]
-                shadow-[0_4px_0_0_#2b2b2b] sm:shadow-[0_6px_0_0_#2b2b2b] dark:shadow-[0_4px_0_0_#f6f4f1] dark:sm:shadow-[0_6px_0_0_#f6f4f1]
-                hover:translate-y-[1.5px] sm:hover:translate-y-[2px] hover:shadow-[0_2.5px_0_0_#2b2b2b] sm:hover:shadow-[0_4px_0_0_#2b2b2b] dark:hover:shadow-[0_2.5px_0_0_#f6f4f1] dark:sm:hover:shadow-[0_4px_0_0_#f6f4f1]
+                border-[1.5px] sm:border-[2px] border-[var(--btn-color)]
+                shadow-[0_4px_0_0_var(--btn-color)] sm:shadow-[0_6px_0_0_var(--btn-color)]
+                hover:translate-y-[1.5px] sm:hover:translate-y-[2px] hover:shadow-[0_2.5px_0_0_var(--btn-color)] sm:hover:shadow-[0_4px_0_0_var(--btn-color)]
                 active:translate-y-[4px] sm:active:translate-y-[6px] active:shadow-none
                 transition-all duration-100 ease-out
                 select-none
