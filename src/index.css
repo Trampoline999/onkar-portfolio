@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: 'Monolisa';
-  src: url('./assets/fonts/0-MonoLisa-normal.woff2') format('woff2'),
+  src: url('./assets/fonts/0-MonoLisa-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -25,6 +25,7 @@
 }
 
 .font-geist-pixel {
+  font-family: var(--font-geist-pixel);
   font-feature-settings: "ss03" on;
 }
 
@@ -59,12 +60,17 @@
   --font-heading: var(--font-sans);
   --font-sans: 'Geist Variable', sans-serif;
   --animate-blink-cursor: blink-cursor 1.2s step-end infinite;
+
   @keyframes blink-cursor {
-  0%, 49% {
-    opacity: 1;
+
+    0%,
+    49% {
+      opacity: 1;
     }
-  50%, 100% {
-    opacity: 0;
+
+    50%,
+    100% {
+      opacity: 0;
     }
   }
 }
@@ -175,27 +181,5 @@
 }
 
 .pause-on-hover:hover .animate-hanging-marquee {
-  animation-play-state: paused;
-}
-
-/* Hero name horizontal loop */
-@keyframes hero-marquee {
-  0% {
-    transform: translateX(0);
-  }
-
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.hero-marquee-track {
-  display: flex;
-  width: max-content;
-  animation: hero-marquee 60s linear infinite;
-  will-change: transform;
-}
-
-.hero-marquee-track:hover {
   animation-play-state: paused;
 }

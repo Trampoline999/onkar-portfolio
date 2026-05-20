@@ -128,21 +128,7 @@ const getLottieData = (colorName) => {
   return lottieCache[colorName];
 };
 
-/* Repeat enough times so the seamless-loop duplicate fills any screen width */
-const REPEATS = 8;
 
-const NameStrip = () => (
-  <>
-    {Array.from({ length: REPEATS }).map((_, i) => (
-      <span key={i} className="inline-flex items-center gap-5 sm:gap-10 pr-5 sm:pr-10">
-        <span className="font-monolisa tracking-[-0.1em] font-black text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-black dark:text-gray-100 whitespace-nowrap leading-none">
-          Onkar Chougule
-        </span>
-        <span className="text-black/20 dark:text-white/20 text-2xl sm:text-3xl select-none">✦</span>
-      </span>
-    ))}
-  </>
-);
 
 const casingColorHex = {
   beige: '#ede3d6',
@@ -158,10 +144,10 @@ const casingColorBorderHex = {
   beige: '#2b2b2b',
   blue: '#1e3a8a',
   green: '#14532d',
-  yellow: '#ffb703',
+  yellow: '#713f12',
   purple: '#4c1d95',
   pink: '#831843',
-  orange: '#fb8500'
+  orange: '#7c2d12'
 };
 
 const Hero = () => {
@@ -197,7 +183,7 @@ const Hero = () => {
               textEl.setAttribute('y', '30'); // Centered vertically in lottie coordinates
               textEl.setAttribute('text-anchor', 'middle');
               textEl.setAttribute('fill', '#000000');
-              
+
               // Sacramento is imported in index.html, with fallbacks to other gorgeous scripts
               textEl.style.fontFamily = '"Sacramento", "Pacifico", "Great Vibes", "Yellowtail", cursive';
               textEl.style.fontSize = '120px';
@@ -308,23 +294,10 @@ const Hero = () => {
           Available for work
         </div>
 
-        {/* ── Horizontal looping name marquee ── */}
-        <div
-          className="w-screen overflow-hidden -mx-6 sm:-mx-10 mb-4 sm:mb-6 py-2"
-          style={{
-            /* fade edges so the loop feels infinite */
-            WebkitMaskImage:
-              "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
-            maskImage:
-              "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)",
-          }}
-        >
-          <div className="hero-marquee-track">
-            <NameStrip />
-            {/* exact duplicate for seamless wrap */}
-            <NameStrip />
-          </div>
-        </div>
+        {/* Static name title */}
+        <h1 className="font-monolisa tracking-tighter font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-black dark:text-gray-100 leading-none mb-4 sm:mb-6 select-none">
+          Onkar Chougule
+        </h1>
 
         <TypingAnimation
           as="p"
