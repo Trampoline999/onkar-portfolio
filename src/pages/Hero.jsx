@@ -295,7 +295,7 @@ const Hero = () => {
         </div>
 
         {/* Static name title */}
-        <h1 className="font-monolisa tracking-[-0.1em] font-black text-4xl sm:text-4xl md:text-6xl lg:text-7xl text-black dark:text-gray-100 leading-none mb-4 sm:mb-6 select-none whitespace-nowrap">
+        <h1 className="font-monolisa tracking-tighter font-black text-4xl sm:text-4xl md:text-6xl lg:text-7xl text-black dark:text-gray-100 leading-none mb-4 sm:mb-6 select-none whitespace-nowrap">
           Onkar Chougule
         </h1>
 
