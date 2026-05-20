@@ -192,7 +192,7 @@ const RetroIcons = ({ activeColor, hasBeenHovered }) => {
         const endAngle = 15;
         const angle = startAngle - (index / (totalIcons - 1)) * (startAngle - endAngle);
         const radian = (angle * Math.PI) / 180;
-        const radius = "clamp(140px, 18vw, 190px)";
+        const radius = "clamp(115px, 18vw, 190px)";
 
         return (
           <motion.div

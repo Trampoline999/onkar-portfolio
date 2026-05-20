@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import mac from "../assets/images/mac.json";
 import RetroIcons from "../../components/RetroIcons";
 import { TypingAnimation } from "../../components/ui/typing-animation";
+import { Mail } from 'lucide-react';
 
 const casingColors = ['beige', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange'];
 
@@ -219,9 +220,9 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-[758px] flex flex-col items-center justify-start overflow-hidden scroll-mt-24">
+    <section id="hero" className="relative min-h-[758px] flex flex-col items-center justify-start overflow-hidden scroll-mt-20">
       {/* Hero content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-48 sm:pt-50 lg:pt-50">
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-center px-6 sm:px-10 pt-32 sm:pt-50 lg:pt-50">
         <div className="relative flex items-center justify-center p-4">
           {/* Retro Icons - Standalone Component */}
           <RetroIcons activeColor={currentColor} hasBeenHovered={hasBeenHovered} />
@@ -319,20 +320,24 @@ const Hero = () => {
                 '--btn-color': casingColorBorderHex[currentColor]
               }}
               className="
-                inline-block
-                font-bricolage font-black uppercase tracking-widest
-                text-[11px] sm:text-sm
-                px-5 py-2 sm:px-9 sm:py-3.5
-                rounded-[10px] sm:rounded-[12px]
+                inline-flex items-center justify-center
+                font-monolisa font-bold uppercase tracking-[0.2em]
+                text-xs sm:text-sm
+                px-7 py-3.5 sm:px-9 sm:py-4.5
+                rounded-[14px] sm:rounded-[16px]
                 border-[1.5px] sm:border-[2px] border-[var(--btn-color)]
-                shadow-[0_4px_0_0_var(--btn-color)] sm:shadow-[0_6px_0_0_var(--btn-color)]
-                hover:translate-y-[1.5px] sm:hover:translate-y-[2px] hover:shadow-[0_2.5px_0_0_var(--btn-color)] sm:hover:shadow-[0_4px_0_0_var(--btn-color)]
-                active:translate-y-[4px] sm:active:translate-y-[6px] active:shadow-none
+                translate-y-0
+                shadow-[0_6px_0_0_var(--btn-color)] sm:shadow-[0_8px_0_0_var(--btn-color)]
+                hover:translate-y-[2px] sm:hover:translate-y-[3px]
+                hover:shadow-[0_4px_0_0_var(--btn-color)] sm:hover:shadow-[0_5px_0_0_var(--btn-color)]
+                active:translate-y-[6px] sm:active:translate-y-[8px]
+                active:shadow-none
                 transition-all duration-100 ease-out
                 select-none
               "
             >
-              Email Me
+              <Mail className="w-[14px] h-[14px] sm:w-[16px] sm:h-[16px] mr-2.5 sm:mr-3 inline-block align-middle transform -translate-y-[1px]" strokeWidth={2.5} />
+              <span>Email Me</span>
             </a>
           </div>
         </div>
