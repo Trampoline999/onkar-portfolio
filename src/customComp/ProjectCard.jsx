@@ -3,7 +3,7 @@ import { ArrowUpRight, ChevronDown } from "lucide-react";
 
 const getTechStyle = (tech) => {
   const name = tech.trim().toLowerCase();
-  switch(name) {
+  switch (name) {
     case "react":
       return {
         bg: "bg-[#e3f8ff] dark:bg-[#0e3040]",
@@ -107,83 +107,83 @@ const ProfileCard = ({
   const [isExpanded, setIsExpanded] = useState(false);
   const [isTechExpanded, setIsTechExpanded] = useState(false);
   return (
-    <div 
-      className={`group flex flex-col-reverse ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} w-full gap-6 lg:gap-16 bg-white dark:bg-[#1f1f22] rounded-[24px] p-4 sm:p-5 lg:p-8 border border-gray-100 dark:border-zinc-800/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:-translate-y-1.5 transition-all duration-500 overflow-hidden relative`}
+    <div
+      className={`group flex flex-col-reverse ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} w-full max-w-[1440px] mx-auto gap-6 lg:gap-16 bg-white dark:bg-[#1f1f22] rounded-[24px] p-4 sm:p-5 lg:p-8 border border-gray-100 dark:border-zinc-800/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.1)] dark:hover:shadow-[0_20px_50px_rgba(0,0,0,0.4)] hover:-translate-y-1.5 transition-all duration-500 overflow-hidden relative`}
     >
 
-        {/* Text Section */}
-        <div className="flex flex-col flex-1 mt-2">
-          <div className="flex items-center mb-2 sm:mb-2 md:mb-2 lg:mb-6">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bricolage font-bold text-gray-900 dark:text-white">
-              {name}
-            </h2>
+      {/* Text Section */}
+      <div className="flex flex-col flex-1 mt-2">
+        <div className="flex items-center mb-2 sm:mb-2 md:mb-2 lg:mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bricolage font-bold text-gray-900 dark:text-white">
+            {name}
+          </h2>
+        </div>
+        <div className="relative mb-5">
+          <div className={`text-[14px] sm:text-[16px] font-bricolage antialiased text-gray-600 dark:text-gray-400 [&_strong]:text-gray-900 lg:leading-relaxed dark:[&_strong]:text-white [&_strong]:font-bold ${isExpanded ? "" : "line-clamp-4 lg:line-clamp-none"}`}>
+            {description}
           </div>
-          <div className="relative mb-5">
-            <div className={`text-[14px] sm:text-[16px] font-bricolage antialiased text-gray-600 dark:text-gray-400 [&_strong]:text-gray-900 lg:leading-relaxed dark:[&_strong]:text-white [&_strong]:font-bold ${isExpanded ? "" : "line-clamp-4 lg:line-clamp-none"}`}>
-              {description}
-            </div>
-            
-            <button 
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="lg:hidden text-xs font-semibold text-gray-900 dark:text-white mt-2 flex items-center gap-1 hover:underline"
-            >
-              {isExpanded ? 'Show Less' : 'Read More'}
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
-            </button>
-          </div>
-          
-          <a 
-            href={githubLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-semibold rounded-2xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors w-fit mb-6"
+
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="lg:hidden text-xs font-semibold text-gray-900 dark:text-white mt-2 flex items-center gap-1 hover:underline"
           >
-            <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" /></svg>
-            GitHub
-          </a>
-          
-          {techstack && (
-            <div 
-              onClick={() => setIsTechExpanded(!isTechExpanded)}
-              className={`flex flex-wrap gap-2 mt-auto pt-4 font-geist-pixel font-semibold tracking-wide border-t border-gray-100 dark:border-zinc-800 transition-all duration-500 ease-in-out cursor-pointer select-none overflow-hidden ${
-                isTechExpanded ? "max-h-[300px]" : "max-h-[48px] hover:max-h-[300px]"
-              }`}
-            >
-              {techstack.split(",").map((tech, i) => {
-                const style = getTechStyle(tech);
-                return (
-                  <span 
-                    key={i} 
-                    className={`text-[10px] uppercase font-bold tracking-wider px-2 py-1 rounded-md border ${style.bg} ${style.text} ${style.border}`}
-                  >
-                    {tech.trim()}
-                  </span>
-                );
-              })}
-            </div>
-          )}
+            {isExpanded ? 'Show Less' : 'Read More'}
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+          </button>
         </div>
 
-        {/* Media Section */}
-        <div className="w-full lg:w-[45%] shrink-0 rounded-xl overflow-hidden bg-gray-50 dark:bg-zinc-900 flex items-center justify-center border border-gray-100 dark:border-zinc-800 aspect-square">
-          {videoSrc ? (
-            <video
-              src={videoSrc}
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <img
-              src={imageSrc}
-              alt={name}
-              className="w-full h-full object-cover"
-            />
-          )}
-        </div>
+        <a
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 text-xs font-semibold rounded-2xl hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors w-fit mb-6"
+        >
+          <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.929.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" /></svg>
+          GitHub
+        </a>
+
+        {techstack && (
+          <div
+            onClick={() => setIsTechExpanded(!isTechExpanded)}
+            className={`flex flex-wrap gap-2 mt-auto pt-4 font-geist-pixel font-semibold tracking-wide border-t border-gray-100 dark:border-zinc-800 transition-all duration-500 ease-in-out cursor-pointer lg:cursor-default select-none overflow-hidden ${
+              isTechExpanded ? "max-h-[300px] lg:max-h-none" : "max-h-[48px] hover:max-h-[300px] lg:max-h-none"
+            }`}
+          >
+            {techstack.split(",").map((tech, i) => {
+              const style = getTechStyle(tech);
+              return (
+                <span
+                  key={i}
+                  className={`text-[10px] uppercase font-bold tracking-wider px-2 py-1 rounded-md border ${style.bg} ${style.text} ${style.border}`}
+                >
+                  {tech.trim()}
+                </span>
+              );
+            })}
+          </div>
+        )}
       </div>
+
+      {/* Media Section */}
+      <div className="w-full lg:w-[45%] shrink-0 rounded-xl overflow-hidden bg-gray-50 dark:bg-zinc-900 flex items-center justify-center border border-gray-100 dark:border-zinc-800 aspect-square">
+        {videoSrc ? (
+          <video
+            src={videoSrc}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <img
+            src={imageSrc}
+            alt={name}
+            className="w-full h-full object-cover"
+          />
+        )}
+      </div>
+    </div>
   );
 };
 
