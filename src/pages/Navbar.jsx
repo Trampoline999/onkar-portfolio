@@ -30,7 +30,7 @@ function NavLink({ children, isMobile = false, onClick }) {
       onClick={onClick}
       className={`
         ${layoutStyles}
-        text-sm font-medium transition-all duration-150
+        text-sm font-geist-pixel uppercase font-semibold tracking-wide transition-all duration-150
         text-black/80 dark:text-white/80 hover:bg-black/5 dark:hover:bg-white/10 hover:text-black dark:hover:text-white
       `}
     >
@@ -86,7 +86,7 @@ export default function Navbar() {
       >
         <button
           onClick={() => handleScroll("hero")}
-          className="px-4 py-2 text-sm font-bold mr-2 rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
+          className="px-4 py-2 text-sm font-bold mr-2 rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 uppercase"
         >
           {BRAND_NAME}
         </button>
@@ -118,7 +118,7 @@ export default function Navbar() {
         >
           <button
             onClick={() => handleScroll("hero")}
-            className="px-4 py-2 text-sm font-black rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95"
+            className="px-4 py-2 text-sm font-black rounded-full transition-all duration-150 text-black dark:text-white hover:bg-black/5 dark:hover:bg-white/10 active:scale-95 uppercase"
           >
             {BRAND_NAME}
           </button>
